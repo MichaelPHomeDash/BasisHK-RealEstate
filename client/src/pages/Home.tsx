@@ -30,7 +30,7 @@ export default function Home() {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto font-light">
-            We leverage <span className="font-medium text-foreground">generative video</span>, <span className="font-medium text-foreground">autonomous agents</span>, and <span className="font-medium text-foreground">predictive algorithms</span> to find premium buyers before your competitors do.
+            We leverage <span className="font-medium animate-shimmer">generative video</span>, <span className="font-medium animate-shimmer">autonomous agents</span>, and <span className="font-medium animate-shimmer">predictive algorithms</span> to find premium buyers before your competitors do.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -169,7 +169,7 @@ export default function Home() {
               <CardHeader className="p-8 border-b border-border/30 bg-gradient-to-r from-primary/5 to-transparent">
                 <CardTitle className="text-xl font-heading font-medium text-primary flex items-center gap-3">
                   <Zap className="w-5 h-5 fill-primary/20" />
-                  The AuraRealtyHK Solution
+                  The BasisHK Solution
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-8 space-y-6">

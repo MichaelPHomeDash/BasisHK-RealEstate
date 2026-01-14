@@ -10,7 +10,7 @@ export default function About() {
         <section className="py-20 bg-secondary/30 border-b border-border">
           <div className="container text-center max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-heading font-bold tracking-tight mb-6 text-foreground">
-              About AuraRealtyHK
+              About BasisHK
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               We are a specialized marketing agency dedicated to empowering Hong Kong real estate professionals with modern digital tools.
@@ -23,7 +23,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                <span className="text-foreground font-semibold">AuraRealtyHK</span> was established to bridge the gap between traditional real estate practices and modern digital marketing.
+                <span className="text-foreground font-semibold">BasisHK</span> was established to bridge the gap between traditional real estate practices and modern digital marketing.
               </p>
               <p>
                 The Hong Kong property market is one of the most competitive in the world. We recognized that individual agents often lack the resources and technical expertise to compete with large agencies in the digital space.
