@@ -1,19 +1,25 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: t('nav.home'), href: "/" },
+    { label: t('nav.services'), href: "/services" },
+    { label: t('nav.about'), href: "/about" },
+    { label: t('nav.contact'), href: "/contact" },
   ];
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'zh' : 'en');
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground font-body selection:bg-primary selection:text-primary-foreground flex flex-col">
@@ -43,20 +49,39 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </Link>
             ))}
+            
+            {/* Language Switcher */}
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-1 rounded-md hover:bg-secondary/50"
+            >
+              <Globe className="w-4 h-4" />
+              <span>{language === 'en' ? '繁' : 'EN'}</span>
+            </button>
+
             <Link href="/contact">
               <Button variant="default" className="font-heading font-bold tracking-wide rounded-full px-6">
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </Link>
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
+          <div className="flex items-center gap-4 md:hidden">
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Globe className="w-4 h-4" />
+              <span>{language === 'en' ? '繁' : 'EN'}</span>
+            </button>
+            <button
+              className="text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
@@ -79,7 +104,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <Link href="/contact">
               <Button className="w-full font-heading font-bold uppercase tracking-wider rounded-none mt-4" onClick={() => setIsMobileMenuOpen(false)}>
-                Get Access
+                {t('nav.getAccess')}
               </Button>
             </Link>
           </div>
@@ -99,12 +124,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="text-primary">●</span> BASISHK
             </h3>
             <p className="text-muted-foreground max-w-md font-light leading-relaxed">
-              Cultivating meaningful connections for Hong Kong's real estate professionals. 
-              Authentic strategies. Sustainable growth. Human-centric marketing.
+              {t('footer.desc')}
             </p>
           </div>
           <div>
-            <h4 className="font-heading font-bold tracking-wide mb-4 text-foreground">Explore</h4>
+            <h4 className="font-heading font-bold tracking-wide mb-4 text-foreground">{t('footer.explore')}</h4>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -118,7 +142,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </ul>
           </div>
           <div>
-            <h4 className="font-heading font-bold uppercase tracking-wider mb-4">Connect</h4>
+            <h4 className="font-heading font-bold uppercase tracking-wider mb-4">{t('footer.connect')}</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a></li>
@@ -127,7 +151,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="container mt-12 pt-8 border-t border-border/20 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} BasisHK. All rights reserved.
+          © {new Date().getFullYear()} BasisHK. {t('footer.rights')}
         </div>
       </footer>
     </div>

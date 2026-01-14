@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, BarChart3, Bot, BrainCircuit, Check, Globe, Sparkles, Target, TrendingUp, Video, Zap } from "lucide-react";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <Layout>
       {/* Hero Section - Creative Professional */}
@@ -19,29 +22,29 @@ export default function Home() {
         <div className="container text-center max-w-4xl relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-white/40 shadow-sm text-primary text-[11px] font-bold uppercase tracking-widest mb-6 animate-in fade-in slide-in-from-bottom-5 duration-700">
             <Sparkles className="w-3 h-3 text-accent-foreground" />
-            <span>Next-Gen Intelligent Marketing Infrastructure</span>
+            <span>{t('home.badge')}</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-heading font-medium mb-6 text-foreground leading-[1.1] tracking-tight">
-            Automated Growth <br />
+            {t('home.hero.title')} <br />
             <span className="italic font-light text-primary">
-              for Elite Real Estate Agents
+              {t('home.hero.subtitle')}
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto font-light">
-            We leverage <span className="font-medium animate-shimmer">generative video</span>, <span className="font-medium animate-shimmer">autonomous agents</span>, and <span className="font-medium animate-shimmer">predictive algorithms</span> to find premium buyers before your competitors do.
+            {t('home.hero.desc')}
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/services">
               <Button size="lg" className="rounded-full px-10 h-12 text-base font-medium shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all hover:-translate-y-1 bg-primary text-white border-none">
-                Explore Infrastructure
+                {t('home.hero.cta.explore')}
               </Button>
             </Link>
             <Link href="/contact">
               <Button variant="outline" size="lg" className="rounded-full px-10 h-12 text-base font-medium bg-white/50 backdrop-blur-sm hover:bg-white border-primary/10 text-primary">
-                Book Demo
+                {t('home.hero.cta.demo')}
               </Button>
             </Link>
           </div>
@@ -65,10 +68,10 @@ export default function Home() {
                 <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center border border-green-100">
                   <TrendingUp className="w-4 h-4 text-green-600" />
                 </div>
-                <span className="text-xs font-bold text-foreground tracking-wide">Campaign ROI</span>
+                <span className="text-xs font-bold text-foreground tracking-wide">{t('home.float.roi')}</span>
               </div>
               <div className="text-3xl font-heading font-medium text-foreground italic">+312%</div>
-              <div className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium mt-1">vs. industry avg.</div>
+              <div className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium mt-1">{t('home.float.industry')}</div>
             </div>
 
             <div className="absolute bottom-8 left-8 glass-card p-4 rounded-2xl animate-in fade-in slide-in-from-left-10 duration-1000 delay-500 flex items-center gap-4 max-w-[260px] hover:scale-105 transition-transform cursor-default">
@@ -76,8 +79,8 @@ export default function Home() {
                 <Bot className="w-5 h-5 text-blue-600" />
               </div>
               <div>
-                <div className="text-sm font-bold text-foreground">New Lead Qualified</div>
-                <div className="text-[11px] text-muted-foreground mt-0.5">Budget: <span className="font-medium text-primary">HK$25M</span> • Mid-Levels</div>
+                <div className="text-sm font-bold text-foreground">{t('home.float.lead')}</div>
+                <div className="text-[11px] text-muted-foreground mt-0.5">{t('home.float.budget')}: <span className="font-medium text-primary">HK$25M</span> • Mid-Levels</div>
               </div>
             </div>
           </div>
@@ -90,10 +93,10 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
-              The <span className="italic text-primary">Intelligent</span> Advantage
+              {t('home.pillars.title')}
             </h2>
             <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
-              Traditional marketing is manual and reactive. Our infrastructure is automated, predictive, and designed for the modern era.
+              {t('home.pillars.desc')}
             </p>
           </div>
 
@@ -101,22 +104,22 @@ export default function Home() {
             {[
               {
                 icon: Video,
-                title: "Generative Video",
-                desc: "We turn static photos into cinematic video tours automatically, capturing 400% more engagement.",
+                title: t('home.pillars.video.title'),
+                desc: t('home.pillars.video.desc'),
                 color: "text-purple-600",
                 bg: "bg-purple-50"
               },
               {
                 icon: Bot,
-                title: "Autonomous Agents",
-                desc: "Our chatbots engage leads instantly, 24/7, qualifying budget and intent before you wake up.",
+                title: t('home.pillars.agents.title'),
+                desc: t('home.pillars.agents.desc'),
                 color: "text-blue-600",
                 bg: "bg-blue-50"
               },
               {
                 icon: Target,
-                title: "Predictive Targeting",
-                desc: "Algorithms analyze thousands of data points to identify high-net-worth buyers ready to transact.",
+                title: t('home.pillars.predictive.title'),
+                desc: t('home.pillars.predictive.desc'),
                 color: "text-indigo-600",
                 bg: "bg-indigo-50"
               }
@@ -144,14 +147,14 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
           <div className="space-y-8">
             <h2 className="text-3xl md:text-5xl font-heading font-medium leading-tight">
-              Stop Relying on <br />
-              <span className="text-muted-foreground line-through decoration-destructive/30 decoration-2 italic">Outdated Methods</span>
+              {t('home.pain.title')} <br />
+              <span className="text-muted-foreground line-through decoration-destructive/30 decoration-2 italic">{t('home.pain.subtitle')}</span>
             </h2>
             <div className="space-y-4">
               {[
-                "Portal saturation means your listings get buried.",
-                "Manual follow-ups are too slow for modern buyers.",
-                "Generic ads waste budget on unqualified clicks."
+                t('home.pain.1'),
+                t('home.pain.2'),
+                t('home.pain.3')
               ].map((point, i) => (
                 <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-secondary/10 border border-border/50 hover:bg-secondary/20 transition-colors">
                   <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5 border border-red-100">
@@ -169,14 +172,14 @@ export default function Home() {
               <CardHeader className="p-8 border-b border-border/30 bg-gradient-to-r from-primary/5 to-transparent">
                 <CardTitle className="text-xl font-heading font-medium text-primary flex items-center gap-3">
                   <Zap className="w-5 h-5 fill-primary/20" />
-                  The BasisHK Solution
+                  {t('home.solution.title')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-8 space-y-6">
                 {[
-                  { title: "Dominance", desc: "Own the feed with high-frequency video content." },
-                  { title: "Speed", desc: "Respond in seconds, not hours, with automation." },
-                  { title: "Precision", desc: "Target only the top 1% of qualified buyers." }
+                  { title: t('home.solution.1.title'), desc: t('home.solution.1.desc') },
+                  { title: t('home.solution.2.title'), desc: t('home.solution.2.desc') },
+                  { title: t('home.solution.3.title'), desc: t('home.solution.3.desc') }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 group">
                     <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
@@ -204,15 +207,15 @@ export default function Home() {
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-left max-w-xl">
               <h2 className="text-3xl md:text-4xl font-heading font-medium mb-2 text-white">
-                Ready to <span className="italic text-accent">Modernize?</span>
+                {t('home.cta.title')} <span className="italic text-accent">{t('home.cta.subtitle')}</span>
               </h2>
               <p className="text-base text-white/80 font-light">
-                Join the top 1% of agents using intelligent infrastructure to dominate the market.
+                {t('home.cta.desc')}
               </p>
             </div>
             <Link href="/contact">
               <span className="inline-flex items-center justify-center rounded-full font-heading font-bold text-primary bg-white h-14 px-10 text-base shadow-lg hover:bg-accent hover:text-primary-foreground hover:scale-105 transition-all whitespace-nowrap cursor-pointer">
-                Start Now
+                {t('home.cta.button')}
               </span>
             </Link>
           </div>

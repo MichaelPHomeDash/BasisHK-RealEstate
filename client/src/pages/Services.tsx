@@ -4,52 +4,54 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
+  const { t } = useLanguage();
 
   const plans = [
     {
-      title: "Starter",
-      desc: "For individual agents starting their digital journey.",
+      title: t('services.plan.starter'),
+      desc: t('services.plan.starter.desc'),
       price: { monthly: 8000, quarterly: 6400 },
       features: [
-        { name: "4 AI Property Videos", included: true },
-        { name: "Basic Lead Capture Bot", included: true },
-        { name: "Social Media Content (12 Posts)", included: true },
-        { name: "Complimentary Property Ad Consultancy", included: true },
-        { name: "Monthly Performance Report", included: true },
-        { name: "Email Support", included: true },
-        { name: "Dedicated Account Manager", included: false }
+        { name: `4 ${t('services.feature.video')}`, included: true },
+        { name: `${t('services.feature.basic')} ${t('services.feature.bot')}`, included: true },
+        { name: `${t('services.feature.content')} (12 ${t('services.feature.posts')})`, included: true },
+        { name: t('services.feature.consultancy'), included: true },
+        { name: `${t('services.feature.monthly')} ${t('services.feature.report')}`, included: true },
+        { name: t('services.feature.support'), included: true },
+        { name: t('services.feature.manager'), included: false }
       ]
     },
     {
-      title: "Growth",
-      desc: "For top producers scaling their volume.",
+      title: t('services.plan.growth'),
+      desc: t('services.plan.growth.desc'),
       price: { monthly: 15000, quarterly: 12000 },
       features: [
-        { name: "8 AI Property Videos", included: true },
-        { name: "Advanced Chatbot (WhatsApp Integration)", included: true },
-        { name: "Social Media Content (Daily Posts)", included: true },
-        { name: "Priority Property Ad Consultancy", included: true },
-        { name: "Predictive Ad Targeting", included: true },
-        { name: "Weekly Strategy Calls", included: true },
-        { name: "Dedicated Account Manager", included: false }
+        { name: `8 ${t('services.feature.video')}`, included: true },
+        { name: `${t('services.feature.advanced')} ${t('services.feature.bot')}`, included: true },
+        { name: `${t('services.feature.content')} (${t('services.feature.weekly')} ${t('services.feature.posts')})`, included: true },
+        { name: t('services.feature.consultancy'), included: true },
+        { name: t('home.pillars.predictive.title'), included: true },
+        { name: t('services.feature.report'), included: true },
+        { name: t('services.feature.manager'), included: false }
       ],
       highlight: true
     },
     {
-      title: "Agency",
-      desc: "For teams and boutique agencies.",
+      title: t('services.plan.agency'),
+      desc: t('services.plan.agency.desc'),
       price: { monthly: "Custom", quarterly: "Custom" },
       features: [
-        { name: "Custom Model Training", included: true },
-        { name: "Full-Service Content Team", included: true },
-        { name: "Dedicated Account Manager", included: true },
-        { name: "Custom API Integrations", included: true },
-        { name: "White-Label Reporting", included: true },
-        { name: "Priority 24/7 Support", included: true },
-        { name: "Strategic Partnership Access", included: true }
+        { name: t('services.feature.video'), included: true },
+        { name: t('services.feature.content'), included: true },
+        { name: t('services.feature.manager'), included: true },
+        { name: t('services.feature.bot'), included: true },
+        { name: t('services.feature.report'), included: true },
+        { name: t('services.feature.support'), included: true },
+        { name: t('services.feature.consultancy'), included: true }
       ]
     }
   ];
@@ -63,14 +65,14 @@ export default function Services() {
         <div className="container text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-border/50 shadow-sm text-primary text-xs font-semibold mb-6 animate-in fade-in slide-in-from-bottom-5 duration-700">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Intelligent Real Estate Marketing</span>
+            <span>{t('services.title')}</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-foreground leading-tight">
-            The Future of <br />
-            <span className="text-primary">Lead Generation</span>
+            {t('services.title')} <br />
+            <span className="text-primary">{t('services.subtitle')}</span>
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-            We combine advanced automation technology with deep real estate expertise to deliver a marketing infrastructure that works 24/7.
+            {t('home.hero.desc')}
           </p>
         </div>
       </section>
@@ -81,24 +83,24 @@ export default function Services() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {[
               {
-                title: "Generative Video Production",
-                desc: "Turn standard listing photos into viral-ready video tours. Our system adds motion, voiceovers, and music automatically.",
+                title: t('home.pillars.video.title'),
+                desc: t('home.pillars.video.desc'),
                 features: ["4K Video Generation", "Multi-Language Voiceovers", "Auto-Scripting"],
                 icon: Video,
                 color: "text-purple-600",
                 bg: "bg-purple-50"
               },
               {
-                title: "Smart Lead Capture",
-                desc: "Deploy intelligent chatbots that live on your ads and website. They qualify leads instantly, filtering out low-intent inquiries.",
+                title: t('home.pillars.agents.title'),
+                desc: t('home.pillars.agents.desc'),
                 features: ["24/7 Instant Response", "Budget Qualification", "CRM Integration"],
                 icon: Bot,
                 color: "text-blue-600",
                 bg: "bg-blue-50"
               },
               {
-                title: "Predictive Analytics",
-                desc: "Stop guessing. Our algorithms analyze market data to predict which neighborhoods and demographics are ready to buy.",
+                title: t('home.pillars.predictive.title'),
+                desc: t('home.pillars.predictive.desc'),
                 features: ["Audience Modeling", "Trend Forecasting", "Ad Spend Optimization"],
                 icon: BrainCircuit,
                 color: "text-indigo-600",
@@ -132,15 +134,15 @@ export default function Services() {
           {/* Pricing Plans - Redesigned & Compact */}
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-foreground">
-              Simple, Transparent Pricing
+              {t('services.select')}
             </h2>
             <p className="text-base text-muted-foreground mb-8">
-              Choose the infrastructure that fits your growth stage. No hidden fees, just results.
+              {t('services.subtitle')}
             </p>
 
             {/* Billing Switcher */}
             <div className="flex items-center justify-center gap-4 mb-8">
-              <span className={`text-sm font-medium ${billingCycle === "monthly" ? "text-foreground" : "text-muted-foreground"}`}>Monthly</span>
+              <span className={`text-sm font-medium ${billingCycle === "monthly" ? "text-foreground" : "text-muted-foreground"}`}>{t('services.monthly')}</span>
               <button 
                 onClick={() => setBillingCycle(billingCycle === "monthly" ? "quarterly" : "monthly")}
                 className="relative w-14 h-7 bg-primary/10 rounded-full p-1 transition-colors hover:bg-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -148,7 +150,7 @@ export default function Services() {
                 <div className={`w-5 h-5 bg-primary rounded-full shadow-sm transition-transform duration-300 ${billingCycle === "quarterly" ? "translate-x-7" : ""}`} />
               </button>
               <span className={`text-sm font-medium ${billingCycle === "quarterly" ? "text-foreground" : "text-muted-foreground"}`}>
-                Quarterly <span className="ml-1 text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">-20%</span>
+                {t('services.quarterly')} <span className="ml-1 text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">{t('services.save')}</span>
               </span>
             </div>
           </div>
@@ -158,7 +160,7 @@ export default function Services() {
               <Card key={i} className={`bg-white border-none shadow-md rounded-2xl p-1 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300 ${plan.highlight ? "ring-2 ring-primary shadow-xl scale-105 z-10" : ""}`}>
                 {plan.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold shadow-md">
-                    Most Popular
+                    {t('services.popular')}
                   </div>
                 )}
                 <div className="p-6 pb-0">
@@ -170,7 +172,7 @@ export default function Services() {
                         <span className="text-3xl font-bold text-foreground">
                           HK${billingCycle === "quarterly" ? plan.price.quarterly.toLocaleString() : plan.price.monthly.toLocaleString()}
                         </span>
-                        <span className="text-xs text-muted-foreground">/month</span>
+                        <span className="text-xs text-muted-foreground">/{t('services.feature.monthly')}</span>
                         {billingCycle === "quarterly" && (
                           <span className="text-sm text-muted-foreground line-through decoration-destructive/50 decoration-2">
                             HK${plan.price.monthly.toLocaleString()}
@@ -182,7 +184,7 @@ export default function Services() {
                     )}
                     {billingCycle === "quarterly" && typeof plan.price.monthly === "number" && typeof plan.price.quarterly === "number" && (
                       <div className="text-xs text-green-600 font-medium mt-1">
-                        Billed quarterly (Save HK${((plan.price.monthly - plan.price.quarterly) * 3).toLocaleString()})
+                        {t('services.quarterly')} ({t('services.save')})
                       </div>
                     )}
                   </div>
@@ -205,7 +207,7 @@ export default function Services() {
                 </CardContent>
                 <CardFooter className="p-6 pt-0">
                   <Button className={`w-full rounded-lg h-10 font-semibold text-sm ${plan.highlight ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"}`}>
-                    {plan.price.monthly === "Custom" ? "Contact Sales" : "Get Started"}
+                    {plan.price.monthly === "Custom" ? t('about.cta.button') : t('nav.getStarted')}
                   </Button>
                 </CardFooter>
               </Card>
@@ -225,15 +227,15 @@ export default function Services() {
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-left">
               <h2 className="text-xl md:text-2xl font-heading font-bold mb-1 text-white leading-tight">
-                Ready to Automate Your Success?
+                {t('home.cta.title')} {t('home.cta.subtitle')}
               </h2>
               <p className="text-sm text-white/90 leading-relaxed">
-                Join the top 1% of agents using intelligent tools.
+                {t('home.cta.desc')}
               </p>
             </div>
             <Link href="/contact">
               <span className="inline-flex items-center justify-center rounded-full font-heading font-bold text-primary bg-white h-10 px-6 text-sm shadow-md hover:bg-white/90 hover:scale-105 transition-all whitespace-nowrap cursor-pointer">
-                Book Strategy Session
+                {t('home.hero.cta.demo')}
               </span>
             </Link>
           </div>
