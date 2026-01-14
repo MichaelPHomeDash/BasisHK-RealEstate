@@ -14,18 +14,45 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { t } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: t('contact.toast.title'),
-        description: t('contact.toast.desc'),
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    // Add budget manually since Select component doesn't use native input
+    // We need to find the select value or use a hidden input
+    // For simplicity in this static template, we'll just submit what we have
+    // In a real app, we'd bind the Select value to a hidden input
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/pangmichael29@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
       });
-    }, 1500);
+
+      if (response.ok) {
+        toast({
+          title: t('contact.toast.title'),
+          description: t('contact.toast.desc'),
+        });
+        form.reset();
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -62,35 +89,40 @@ export default function Contact() {
           {/* Form */}
           <div className="bg-card rounded-lg shadow-sm border border-border p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Hidden settings for FormSubmit */}
+              <input type="hidden" name="_subject" value="New Lead from BasisHK Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName" className="text-sm font-medium text-foreground">{t('contact.form.firstName')}</Label>
-                  <Input id="firstName" required className="bg-background" placeholder="John" />
+                  <Input id="firstName" name="firstName" required className="bg-background" placeholder="John" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="lastName" className="text-sm font-medium text-foreground">{t('contact.form.lastName')}</Label>
-                  <Input id="lastName" required className="bg-background" placeholder="Doe" />
+                  <Input id="lastName" name="lastName" required className="bg-background" placeholder="Doe" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="agency" className="text-sm font-medium text-foreground">{t('contact.form.agency')}</Label>
-                <Input id="agency" required className="bg-background" placeholder="Company Name" />
+                <Input id="agency" name="agency" required className="bg-background" placeholder="Company Name" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium text-foreground">{t('contact.form.email')}</Label>
-                <Input id="email" type="email" required className="bg-background" placeholder="john@example.com" />
+                <Input id="email" name="email" type="email" required className="bg-background" placeholder="john@example.com" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="phone" className="text-sm font-medium text-foreground">{t('contact.form.phone')}</Label>
-                <Input id="phone" type="tel" required className="bg-background" placeholder="+852" />
+                <Input id="phone" name="phone" type="tel" required className="bg-background" placeholder="+852" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="budget" className="text-sm font-medium text-foreground">{t('contact.form.budget')}</Label>
-                <Select>
+                <Select name="budget">
                   <SelectTrigger className="bg-background">
                     <SelectValue placeholder={t('contact.form.budget.placeholder')} />
                   </SelectTrigger>
@@ -104,7 +136,7 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <Label htmlFor="message" className="text-sm font-medium text-foreground">{t('contact.form.message')}</Label>
-                <Textarea id="message" className="bg-background min-h-[120px]" placeholder={t('contact.form.message.placeholder')} />
+                <Textarea id="message" name="message" className="bg-background min-h-[120px]" placeholder={t('contact.form.message.placeholder')} />
               </div>
 
               <Button type="submit" disabled={isSubmitting} className="w-full font-semibold h-12 bg-primary text-primary-foreground hover:bg-primary/90">
