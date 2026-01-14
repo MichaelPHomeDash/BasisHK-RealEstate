@@ -116,6 +116,7 @@ export default function Home() {
                 icon: Video,
                 title: t('home.pillars.video.title'),
                 desc: t('home.pillars.video.desc'),
+                detail: t('home.pillars.video.detail'),
                 color: "text-purple-600",
                 bg: "bg-purple-50"
               },
@@ -123,6 +124,7 @@ export default function Home() {
                 icon: Bot,
                 title: t('home.pillars.agents.title'),
                 desc: t('home.pillars.agents.desc'),
+                detail: t('home.pillars.agents.detail'),
                 color: "text-blue-600",
                 bg: "bg-blue-50"
               },
@@ -130,6 +132,7 @@ export default function Home() {
                 icon: Target,
                 title: t('home.pillars.predictive.title'),
                 desc: t('home.pillars.predictive.desc'),
+                detail: t('home.pillars.predictive.detail'),
                 color: "text-indigo-600",
                 bg: "bg-indigo-50"
               }
@@ -142,9 +145,12 @@ export default function Home() {
                   <CardTitle className="text-xl font-heading font-medium">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-8 pt-0">
-                  <CardDescription className="text-sm leading-relaxed text-muted-foreground font-light">
+                  <CardDescription className="text-sm leading-relaxed text-muted-foreground font-light mb-4">
                     {feature.desc}
                   </CardDescription>
+                  <p className="text-xs text-muted-foreground/80 leading-relaxed border-t border-border/50 pt-4">
+                    {feature.detail}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -172,18 +178,21 @@ export default function Home() {
               icon: Share2,
               title: t('home.how.1.title'),
               desc: t('home.how.1.desc'),
+              detail: t('home.how.1.detail'),
               step: "01"
             },
             {
               icon: BrainCircuit,
               title: t('home.how.2.title'),
               desc: t('home.how.2.desc'),
+              detail: t('home.how.2.detail'),
               step: "02"
             },
             {
               icon: Smartphone,
               title: t('home.how.3.title'),
               desc: t('home.how.3.desc'),
+              detail: t('home.how.3.detail'),
               step: "03"
             }
           ].map((item, i) => (
@@ -195,8 +204,11 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-heading font-medium mb-3">{item.title}</h3>
-              <p className="text-sm text-muted-foreground font-light max-w-xs leading-relaxed">
+              <p className="text-sm text-muted-foreground font-light max-w-xs leading-relaxed mb-4">
                 {item.desc}
+              </p>
+              <p className="text-xs text-muted-foreground/70 max-w-xs leading-relaxed bg-secondary/30 p-3 rounded-lg">
+                {item.detail}
               </p>
             </div>
           ))}
