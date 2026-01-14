@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* Logo */}
           <Link href="/">
             <a className="text-2xl font-heading font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity flex items-center gap-2">
-              <span className="text-primary">●</span> PROPELHK
+              <span className="text-primary">●</span> AURAREALTYHK
             </a>
           </Link>
 
@@ -96,7 +96,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
             <h3 className="text-2xl font-heading font-bold text-foreground mb-4 flex items-center gap-2">
-              <span className="text-primary">●</span> PROPELHK
+              <span className="text-primary">●</span> AURAREALTYHK
             </h3>
             <p className="text-muted-foreground max-w-md font-light leading-relaxed">
               Cultivating meaningful connections for Hong Kong's real estate professionals. 
@@ -127,7 +127,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="container mt-12 pt-8 border-t border-border/20 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} PropelHK. All rights reserved.
+          © {new Date().getFullYear()} AuraRealtyHK. All rights reserved.
         </div>
       </footer>
     </div>

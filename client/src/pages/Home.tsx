@@ -169,7 +169,7 @@ export default function Home() {
               <CardHeader className="p-8 border-b border-border/30 bg-gradient-to-r from-primary/5 to-transparent">
                 <CardTitle className="text-xl font-heading font-medium text-primary flex items-center gap-3">
                   <Zap className="w-5 h-5 fill-primary/20" />
-                  The PropelHK Solution
+                  The AuraRealtyHK Solution
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-8 space-y-6">

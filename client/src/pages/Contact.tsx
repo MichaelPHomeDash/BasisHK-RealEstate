@@ -20,7 +20,7 @@ export default function Contact() {
       setIsSubmitting(false);
       toast({
         title: "Inquiry Received",
-        description: "Thank you for contacting PropelHK. A representative will respond to your inquiry within 24 hours.",
+        description: "Thank you for contacting AuraRealtyHK. A representative will respond to your inquiry within 24 hours.",
       });
     }, 1500);
   };
@@ -46,7 +46,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-2">Email</h3>
-                <p className="text-muted-foreground">contact@propelhk.com</p>
+                <p className="text-muted-foreground">contact@aurarealtyhk.com</p>
               </div>
             </div>
           </div>
