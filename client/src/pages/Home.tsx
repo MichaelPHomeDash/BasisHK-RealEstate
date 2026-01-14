@@ -7,11 +7,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const homeKeywords = language === 'en'
+    ? ["Real Estate Marketing Automation", "Generative Video for Agents", "Predictive Lead Scoring", "Hong Kong Property Tech", "Luxury Real Estate Marketing"]
+    : ["地產營銷自動化", "生成式影片", "預測性客源分析", "香港房地產科技", "豪宅營銷"];
 
   return (
     <Layout>
-      <SEO />
+      <SEO keywords={homeKeywords} />
       {/* Hero Section - Creative Professional */}
       <section className="relative pt-20 pb-16 overflow-hidden">
         {/* Mesh Gradient Background */}

@@ -6,13 +6,15 @@ interface SEOProps {
   description?: string;
   image?: string;
   url?: string;
+  keywords?: string[];
 }
 
 export default function SEO({ 
   title, 
   description, 
   image = "/og-image.png", 
-  url 
+  url,
+  keywords = []
 }: SEOProps) {
   const { language } = useLanguage();
   
@@ -25,17 +27,23 @@ export default function SEO({
     ? "Automated growth for elite real estate agents. We leverage generative video, autonomous agents, and predictive algorithms to find premium buyers."
     : "專為精英地產代理而設的自動化增長方案。我們利用生成式影片、自動化代理和預測算法，助您鎖定優質買家。";
 
+  const defaultKeywords = language === 'en'
+    ? ["Real Estate Marketing", "PropTech HK", "Lead Generation", "AI Real Estate", "Hong Kong Property", "Automated Agents"]
+    : ["地產營銷", "香港房地產科技", "客源開發", "AI地產", "香港樓盤", "自動化代理"];
+
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const finalDescription = description || defaultDescription;
   const siteUrl = "https://basishk.com";
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
   const fullImage = image.startsWith("http") ? image : `${siteUrl}${image}`;
+  const finalKeywords = [...defaultKeywords, ...keywords].join(", ");
 
   return (
     <Helmet>
       {/* Standard Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={finalDescription} />
+      <meta name="keywords" content={finalKeywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="canonical" href={fullUrl} />
       <html lang={language === 'en' ? 'en' : 'zh-HK'} />
