@@ -62,12 +62,16 @@ export default function Home() {
       <section className="pb-20 container">
         <div className="relative max-w-5xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white aspect-[16/9] group">
-            <img 
-              src="/images/hero-city-night.jpg" 
-              alt="Hong Kong Real Estate Analytics" 
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
               className="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent mix-blend-multiply" />
+            >
+              <source src="/videos/immersive-property-showcase.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent mix-blend-multiply pointer-events-none" />
             
             {/* Floating Glass Cards - 3D Effect */}
             <div className="absolute top-8 right-8 glass-card p-4 rounded-2xl animate-in fade-in slide-in-from-right-10 duration-1000 delay-300 max-w-[200px] hover:scale-105 transition-transform cursor-default">
