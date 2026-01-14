@@ -7,35 +7,40 @@ import { Link } from "wouter";
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section - Ultra Compact */}
-      <section className="relative pt-16 pb-12 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-[80px] -z-10" />
+      {/* Hero Section - Creative Professional */}
+      <section className="relative pt-20 pb-16 overflow-hidden">
+        {/* Mesh Gradient Background */}
+        <div className="absolute inset-0 mesh-bg -z-20" />
         
-        <div className="container text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-border/50 shadow-sm text-primary text-[10px] font-bold uppercase tracking-wider mb-4 animate-in fade-in slide-in-from-bottom-5 duration-700">
-            <Sparkles className="w-3 h-3" />
+        {/* Organic Orb Animations */}
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-secondary/30 rounded-full blur-[100px] animate-pulse -z-10" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-accent/20 rounded-full blur-[120px] -z-10" />
+        
+        <div className="container text-center max-w-4xl relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-white/40 shadow-sm text-primary text-[11px] font-bold uppercase tracking-widest mb-6 animate-in fade-in slide-in-from-bottom-5 duration-700">
+            <Sparkles className="w-3 h-3 text-accent-foreground" />
             <span>Next-Gen Intelligent Marketing Infrastructure</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4 text-foreground leading-tight tracking-tight">
-            AUTOMATED GROWTH <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
-              FOR ELITE REAL ESTATE AGENTS
+          <h1 className="text-5xl md:text-7xl font-heading font-medium mb-6 text-foreground leading-[1.1] tracking-tight">
+            Automated Growth <br />
+            <span className="italic font-light text-primary">
+              for Elite Real Estate Agents
             </span>
           </h1>
           
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
-            We leverage generative video, autonomous lead capturing agents, and predictive algorithms to find premium buyers before your competitors do.
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto font-light">
+            We leverage <span className="font-medium text-foreground">generative video</span>, <span className="font-medium text-foreground">autonomous agents</span>, and <span className="font-medium text-foreground">predictive algorithms</span> to find premium buyers before your competitors do.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/services">
-              <Button size="lg" className="rounded-full px-8 h-10 text-sm font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:-translate-y-0.5">
+              <Button size="lg" className="rounded-full px-10 h-12 text-base font-medium shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all hover:-translate-y-1 bg-primary text-white border-none">
                 Explore Infrastructure
               </Button>
             </Link>
             <Link href="/contact">
-              <Button variant="outline" size="lg" className="rounded-full px-8 h-10 text-sm font-bold bg-white hover:bg-secondary/50 border-border/50">
+              <Button variant="outline" size="lg" className="rounded-full px-10 h-12 text-base font-medium bg-white/50 backdrop-blur-sm hover:bg-white border-primary/10 text-primary">
                 Book Demo
               </Button>
             </Link>
@@ -43,55 +48,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Floating UI Showcase - Compact */}
-      <section className="pb-16 container">
-        <div className="relative max-w-4xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-white aspect-[16/9] group">
+      {/* Floating UI Showcase - Creative Depth */}
+      <section className="pb-20 container">
+        <div className="relative max-w-5xl mx-auto">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white aspect-[16/9] group">
             <img 
               src="/images/hero-city-night.jpg" 
               alt="Hong Kong Real Estate Analytics" 
-              className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent mix-blend-multiply" />
             
-            {/* Floating Glass Cards - Compact */}
-            <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white/20 animate-in fade-in slide-in-from-right-10 duration-1000 delay-300 max-w-[180px]">
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                  <TrendingUp className="w-3 h-3 text-green-600" />
+            {/* Floating Glass Cards - 3D Effect */}
+            <div className="absolute top-8 right-8 glass-card p-4 rounded-2xl animate-in fade-in slide-in-from-right-10 duration-1000 delay-300 max-w-[200px] hover:scale-105 transition-transform cursor-default">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center border border-green-100">
+                  <TrendingUp className="w-4 h-4 text-green-600" />
                 </div>
-                <span className="text-xs font-bold text-foreground">Campaign ROI</span>
+                <span className="text-xs font-bold text-foreground tracking-wide">Campaign ROI</span>
               </div>
-              <div className="text-xl font-bold text-foreground">+312%</div>
-              <div className="text-[10px] text-muted-foreground">vs. industry avg.</div>
+              <div className="text-3xl font-heading font-medium text-foreground italic">+312%</div>
+              <div className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium mt-1">vs. industry avg.</div>
             </div>
 
-            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white/20 animate-in fade-in slide-in-from-left-10 duration-1000 delay-500 flex items-center gap-3 max-w-[220px]">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
-                <Bot className="w-4 h-4 text-blue-600" />
+            <div className="absolute bottom-8 left-8 glass-card p-4 rounded-2xl animate-in fade-in slide-in-from-left-10 duration-1000 delay-500 flex items-center gap-4 max-w-[260px] hover:scale-105 transition-transform cursor-default">
+              <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center shrink-0 border border-blue-100">
+                <Bot className="w-5 h-5 text-blue-600" />
               </div>
               <div>
-                <div className="text-xs font-bold text-foreground">New Lead Qualified</div>
-                <div className="text-[10px] text-muted-foreground">Budget: HK$25M • Mid-Levels</div>
+                <div className="text-sm font-bold text-foreground">New Lead Qualified</div>
+                <div className="text-[11px] text-muted-foreground mt-0.5">Budget: <span className="font-medium text-primary">HK$25M</span> • Mid-Levels</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Pillars - Compact Bento Grid */}
-      <section className="py-12 bg-secondary/30">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3 text-foreground">
-              The Intelligent Advantage
+      {/* Core Pillars - Editorial Grid */}
+      <section className="py-20 bg-secondary/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
+              The <span className="italic text-primary">Intelligent</span> Advantage
             </h2>
-            <p className="text-sm text-muted-foreground">
-              Traditional marketing is manual and reactive. Our infrastructure is automated and predictive.
+            <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
+              Traditional marketing is manual and reactive. Our infrastructure is automated, predictive, and designed for the modern era.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
                 icon: Video,
@@ -115,15 +121,15 @@ export default function Home() {
                 bg: "bg-indigo-50"
               }
             ].map((feature, i) => (
-              <Card key={i} className="bg-white border-none shadow-sm hover:shadow-md transition-all duration-300 rounded-xl overflow-hidden group">
-                <CardHeader className="p-5 pb-2">
-                  <div className={`w-10 h-10 ${feature.bg} rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                    <feature.icon className={`w-5 h-5 ${feature.color}`} />
+              <Card key={i} className="bg-white/80 backdrop-blur-sm border-white/50 shadow-sm hover:shadow-xl transition-all duration-500 rounded-2xl overflow-hidden group hover:-translate-y-1">
+                <CardHeader className="p-8 pb-4">
+                  <div className={`w-12 h-12 ${feature.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500`}>
+                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
-                  <CardTitle className="text-lg font-heading font-bold">{feature.title}</CardTitle>
+                  <CardTitle className="text-xl font-heading font-medium">{feature.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="p-5 pt-0">
-                  <CardDescription className="text-xs leading-relaxed text-muted-foreground">
+                <CardContent className="p-8 pt-0">
+                  <CardDescription className="text-sm leading-relaxed text-muted-foreground font-light">
                     {feature.desc}
                   </CardDescription>
                 </CardContent>
@@ -133,52 +139,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pain Points vs Solution - Compact Comparison */}
-      <section className="py-12 container">
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
-          <div className="space-y-6">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold leading-tight">
+      {/* Pain Points vs Solution - Editorial Comparison */}
+      <section className="py-20 container">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+          <div className="space-y-8">
+            <h2 className="text-3xl md:text-5xl font-heading font-medium leading-tight">
               Stop Relying on <br />
-              <span className="text-muted-foreground line-through decoration-destructive/50">Outdated Methods</span>
+              <span className="text-muted-foreground line-through decoration-destructive/30 decoration-2 italic">Outdated Methods</span>
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {[
                 "Portal saturation means your listings get buried.",
                 "Manual follow-ups are too slow for modern buyers.",
                 "Generic ads waste budget on unqualified clicks."
               ].map((point, i) => (
-                <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/20 border border-border/50">
-                  <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-secondary/10 border border-border/50 hover:bg-secondary/20 transition-colors">
+                  <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-0.5 border border-red-100">
                     <span className="text-red-600 font-bold text-xs">✕</span>
                   </div>
-                  <p className="text-sm text-muted-foreground font-medium">{point}</p>
+                  <p className="text-base text-muted-foreground font-light">{point}</p>
                 </div>
               ))}
             </div>
           </div>
           
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-2xl blur-3xl -z-10" />
-            <Card className="bg-white border-none shadow-xl rounded-2xl overflow-hidden">
-              <CardHeader className="p-6 border-b border-border/50 bg-primary/5">
-                <CardTitle className="text-lg font-bold text-primary flex items-center gap-2">
-                  <Zap className="w-4 h-4 fill-primary" />
+          <div className="relative pl-4 md:pl-10">
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/20 rounded-[2rem] blur-3xl -z-10" />
+            <Card className="bg-white/90 backdrop-blur border-white/60 shadow-2xl rounded-[2rem] overflow-hidden relative z-10">
+              <CardHeader className="p-8 border-b border-border/30 bg-gradient-to-r from-primary/5 to-transparent">
+                <CardTitle className="text-xl font-heading font-medium text-primary flex items-center gap-3">
+                  <Zap className="w-5 h-5 fill-primary/20" />
                   The PropelHK Solution
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-8 space-y-6">
                 {[
                   { title: "Dominance", desc: "Own the feed with high-frequency video content." },
                   { title: "Speed", desc: "Respond in seconds, not hours, with automation." },
                   { title: "Precision", desc: "Target only the top 1% of qualified buyers." }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <Check className="w-4 h-4 text-primary" />
+                  <div key={i} className="flex items-center gap-4 group">
+                    <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
+                      <Check className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-foreground">{item.title}</div>
-                      <div className="text-xs text-muted-foreground">{item.desc}</div>
+                      <div className="text-lg font-heading font-medium text-foreground">{item.title}</div>
+                      <div className="text-sm text-muted-foreground font-light">{item.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -188,22 +194,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section - Ultra Compact */}
-      <section className="py-10 container">
-        <div className="bg-primary rounded-2xl p-6 md:p-8 text-center relative overflow-hidden shadow-lg max-w-4xl mx-auto">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-10" />
+      {/* CTA Section - Creative Finish */}
+      <section className="py-16 container">
+        <div className="bg-primary rounded-[2rem] p-10 md:p-16 text-center relative overflow-hidden shadow-2xl max-w-5xl mx-auto group">
+          {/* Animated Background */}
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-5 group-hover:opacity-10 transition-opacity duration-700" />
+          <div className="absolute -top-[50%] -right-[20%] w-[600px] h-[600px] bg-accent/10 rounded-full blur-[100px] group-hover:bg-accent/20 transition-colors duration-700" />
           
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-left">
-              <h2 className="text-lg md:text-xl font-heading font-bold mb-1 text-white">
-                Ready to Modernize?
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-left max-w-xl">
+              <h2 className="text-3xl md:text-4xl font-heading font-medium mb-2 text-white">
+                Ready to <span className="italic text-accent">Modernize?</span>
               </h2>
-              <p className="text-xs text-white/90">
-                Join the top 1% of agents using intelligent infrastructure.
+              <p className="text-base text-white/80 font-light">
+                Join the top 1% of agents using intelligent infrastructure to dominate the market.
               </p>
             </div>
             <Link href="/contact">
-              <span className="inline-flex items-center justify-center rounded-full font-heading font-bold text-primary bg-white h-9 px-6 text-xs shadow-md hover:bg-white/90 hover:scale-105 transition-all whitespace-nowrap cursor-pointer">
+              <span className="inline-flex items-center justify-center rounded-full font-heading font-bold text-primary bg-white h-14 px-10 text-base shadow-lg hover:bg-accent hover:text-primary-foreground hover:scale-105 transition-all whitespace-nowrap cursor-pointer">
                 Start Now
               </span>
             </Link>
