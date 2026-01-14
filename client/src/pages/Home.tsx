@@ -231,7 +231,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 -mx-4 px-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0 md:mx-auto md:px-0 max-w-6xl scrollbar-hide">
             {[
               {
                 title: t('home.cases.midlevels.title'),
@@ -261,27 +261,27 @@ export default function Home() {
                 ]
               }
             ].map((study, i) => (
-              <Card key={i} className="bg-white border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group rounded-2xl">
-                <div className="relative h-48 overflow-hidden">
+              <Card key={i} className="min-w-[280px] w-[85vw] md:w-auto snap-center bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group rounded-xl flex flex-col">
+                <div className="relative h-40 md:h-48 overflow-hidden shrink-0">
                   <img 
                     src={study.image} 
                     alt={study.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-lg font-heading font-bold">{study.title}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
+                  <div className="absolute bottom-3 left-4 text-white pr-4">
+                    <h3 className="text-base md:text-lg font-heading font-bold leading-tight">{study.title}</h3>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                <CardContent className="p-4 md:p-5 flex flex-col grow justify-between">
+                  <p className="text-xs md:text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-2">
                     {study.desc}
                   </p>
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/50">
+                  <div className="grid grid-cols-2 gap-3 pt-3 border-t border-border/50">
                     {study.stats.map((stat, j) => (
                       <div key={j}>
-                        <div className="text-xl font-bold text-primary">{stat.value}</div>
-                        <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{stat.label}</div>
+                        <div className="text-lg md:text-xl font-bold text-primary leading-none mb-1">{stat.value}</div>
+                        <div className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider font-medium">{stat.label}</div>
                       </div>
                     ))}
                   </div>
