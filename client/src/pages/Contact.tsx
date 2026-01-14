@@ -19,8 +19,8 @@ export default function Contact() {
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message Sent",
-        description: "We'll be in touch shortly to start the conversation.",
+        title: "Inquiry Received",
+        description: "Thank you for contacting PropelHK. A representative will respond to your inquiry within 24 hours.",
       });
     }, 1500);
   };
@@ -28,69 +28,79 @@ export default function Contact() {
   return (
     <Layout>
       <div className="min-h-screen bg-background flex items-center justify-center py-20 px-4">
-        <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-6xl grid md:grid-cols-2 gap-16 items-start">
           
           {/* Text Content */}
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight leading-none text-foreground">
-              Let's Start <br />
-              <span className="text-primary italic">Something New.</span>
+          <div className="space-y-8 sticky top-24">
+            <h1 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-foreground">
+              Contact Us
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-md font-light">
-              We're excited to hear your story. Whether you're looking to refresh your brand or find new leads, we're here to help you grow.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Interested in our services? Please fill out the form to schedule a consultation with our marketing team. We look forward to discussing how we can assist in growing your real estate business.
             </p>
             
-            <div className="space-y-4 pt-8 border-t border-border">
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 bg-green-500 rounded-full" />
-                <span className="font-heading tracking-wide text-sm text-muted-foreground">Accepting New Partners</span>
+            <div className="space-y-6 pt-8 border-t border-border">
+              <div>
+                <h3 className="font-bold text-foreground mb-2">Office Hours</h3>
+                <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                <span className="font-heading tracking-wide text-sm text-muted-foreground">Free Initial Consultation</span>
+              <div>
+                <h3 className="font-bold text-foreground mb-2">Email</h3>
+                <p className="text-muted-foreground">contact@propelhk.com</p>
               </div>
             </div>
           </div>
 
           {/* Form */}
-          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-border/50">
+          <div className="bg-card rounded-lg shadow-sm border border-border p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="name" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">Your Name</Label>
-                <Input id="name" required className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12" placeholder="Jane Doe" />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName" className="text-sm font-medium text-foreground">First Name</Label>
+                  <Input id="firstName" required className="bg-background" placeholder="John" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="lastName" className="text-sm font-medium text-foreground">Last Name</Label>
+                  <Input id="lastName" required className="bg-background" placeholder="Doe" />
+                </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="agency" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">Agency</Label>
-                <Input id="agency" required className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12" placeholder="e.g. Midland, Centaline" />
+                <Label htmlFor="agency" className="text-sm font-medium text-foreground">Real Estate Agency</Label>
+                <Input id="agency" required className="bg-background" placeholder="Company Name" />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="whatsapp" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">WhatsApp Number</Label>
-                <Input id="whatsapp" type="tel" required className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12" placeholder="+852" />
+                <Label htmlFor="email" className="text-sm font-medium text-foreground">Email Address</Label>
+                <Input id="email" type="email" required className="bg-background" placeholder="john@example.com" />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="budget" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">Monthly Budget (HKD)</Label>
+                <Label htmlFor="phone" className="text-sm font-medium text-foreground">Phone Number</Label>
+                <Input id="phone" type="tel" required className="bg-background" placeholder="+852" />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="budget" className="text-sm font-medium text-foreground">Marketing Budget (Monthly)</Label>
                 <Select>
-                  <SelectTrigger className="bg-secondary/30 border-transparent focus:border-primary rounded-xl h-12">
-                    <SelectValue placeholder="Select budget range" />
+                  <SelectTrigger className="bg-background">
+                    <SelectValue placeholder="Select range" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                    <SelectItem value="10k-30k">$10,000 - $30,000</SelectItem>
-                    <SelectItem value="30k+">$30,000+</SelectItem>
+                    <SelectItem value="5k-10k">HK$5,000 - HK$10,000</SelectItem>
+                    <SelectItem value="10k-30k">HK$10,000 - HK$30,000</SelectItem>
+                    <SelectItem value="30k+">HK$30,000+</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message" className="font-heading tracking-wide text-xs text-muted-foreground uppercase">How can we help?</Label>
-                <Textarea id="message" className="bg-secondary/30 border-transparent focus:border-primary rounded-xl min-h-[100px]" placeholder="Tell us about your goals..." />
+                <Label htmlFor="message" className="text-sm font-medium text-foreground">Message</Label>
+                <Textarea id="message" className="bg-background min-h-[120px]" placeholder="Please describe your current marketing challenges..." />
               </div>
 
-              <Button type="submit" disabled={isSubmitting} className="w-full font-heading font-bold tracking-wide rounded-full h-14 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 shadow-lg">
-                {isSubmitting ? "Sending..." : "Send Message"}
+              <Button type="submit" disabled={isSubmitting} className="w-full font-semibold h-12 bg-primary text-primary-foreground hover:bg-primary/90">
+                {isSubmitting ? "Submitting..." : "Submit Inquiry"}
               </Button>
             </form>
           </div>
