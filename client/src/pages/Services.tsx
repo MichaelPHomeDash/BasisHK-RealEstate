@@ -20,6 +20,7 @@ export default function Services() {
         { name: `4 ${t('services.feature.video')}`, included: true },
         { name: `${t('services.feature.basic')} ${t('services.feature.bot')}`, included: true },
         { name: `${t('services.feature.content')} (12 ${t('services.feature.posts')})`, included: true },
+        { name: t('services.feature.revisions'), included: true },
         { name: t('services.feature.consultancy'), included: true },
         { name: `${t('services.feature.monthly')} ${t('services.feature.report')}`, included: true },
         { name: t('services.feature.support'), included: true },
@@ -34,6 +35,7 @@ export default function Services() {
         { name: `8 ${t('services.feature.video')}`, included: true },
         { name: `${t('services.feature.advanced')} ${t('services.feature.bot')}`, included: true },
         { name: `${t('services.feature.content')} (${t('services.feature.weekly')} ${t('services.feature.posts')})`, included: true },
+        { name: t('services.feature.revisions'), included: true },
         { name: t('services.feature.consultancy'), included: true },
         { name: t('home.pillars.predictive.title'), included: true },
         { name: t('services.feature.report'), included: true },
@@ -48,6 +50,7 @@ export default function Services() {
       features: [
         { name: t('services.feature.video'), included: true },
         { name: t('services.feature.content'), included: true },
+        { name: t('services.feature.revisions'), included: true },
         { name: t('services.feature.manager'), included: true },
         { name: t('services.feature.bot'), included: true },
         { name: t('services.feature.report'), included: true },
@@ -174,13 +177,15 @@ export default function Services() {
                   <CardDescription className="mt-1 text-xs">{plan.desc}</CardDescription>
                   <div className="mt-4 mb-4">
                     {typeof plan.price.monthly === "number" ? (
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-3xl font-bold text-foreground">
-                          HK${billingCycle === "quarterly" ? plan.price.quarterly.toLocaleString() : plan.price.monthly.toLocaleString()}
-                        </span>
-                        <span className="text-xs text-muted-foreground">/{t('services.feature.monthly')}</span>
+                      <div className="flex flex-col items-start">
+                        <div className="flex items-baseline gap-1 flex-wrap">
+                          <span className="text-3xl font-bold text-foreground">
+                            HK${billingCycle === "quarterly" ? plan.price.quarterly.toLocaleString() : plan.price.monthly.toLocaleString()}
+                          </span>
+                          <span className="text-xs text-muted-foreground whitespace-nowrap">/{t('services.feature.monthly')}</span>
+                        </div>
                         {billingCycle === "quarterly" && (
-                          <span className="text-sm text-muted-foreground line-through decoration-destructive/50 decoration-2">
+                          <span className="text-sm text-muted-foreground line-through decoration-destructive/50 decoration-2 mt-1">
                             HK${plan.price.monthly.toLocaleString()}
                           </span>
                         )}
