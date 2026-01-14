@@ -28,7 +28,7 @@ export default function Services() {
       desc: "For top producers scaling their volume.",
       price: { monthly: 15000, quarterly: 12000 },
       features: [
-        { name: "Unlimited AI Property Videos", included: true },
+        { name: "8 AI Property Videos", included: true },
         { name: "Advanced Chatbot (WhatsApp Integration)", included: true },
         { name: "Social Media Content (Daily Posts)", included: true },
         { name: "Priority Property Ad Consultancy", included: true },
