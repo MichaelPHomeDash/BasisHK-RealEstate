@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap } from "lucide-react";
+import { Badge, Bot, BrainCircuit, Check, Sparkles, Video, Zap, X } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -14,11 +14,13 @@ export default function Services() {
       desc: "For individual agents starting their digital journey.",
       price: { monthly: 8000, quarterly: 6400 },
       features: [
-        "5 Generative Video Tours",
-        "Basic Lead Capture Bot",
-        "Social Media Content (12 Posts)",
-        "Monthly Performance Report",
-        "Email Support"
+        { name: "4 AI Property Videos", included: true },
+        { name: "Basic Lead Capture Bot", included: true },
+        { name: "Social Media Content (12 Posts)", included: true },
+        { name: "Complimentary Property Ad Consultancy", included: true },
+        { name: "Monthly Performance Report", included: true },
+        { name: "Email Support", included: true },
+        { name: "Dedicated Account Manager", included: false }
       ]
     },
     {
@@ -26,12 +28,13 @@ export default function Services() {
       desc: "For top producers scaling their volume.",
       price: { monthly: 15000, quarterly: 12000 },
       features: [
-        "Unlimited Generative Video Tours",
-        "Advanced Chatbot (WhatsApp Integration)",
-        "Social Media Content (Daily Posts)",
-        "Predictive Ad Targeting",
-        "Weekly Strategy Calls",
-        "CRM Integration"
+        { name: "Unlimited AI Property Videos", included: true },
+        { name: "Advanced Chatbot (WhatsApp Integration)", included: true },
+        { name: "Social Media Content (Daily Posts)", included: true },
+        { name: "Priority Property Ad Consultancy", included: true },
+        { name: "Predictive Ad Targeting", included: true },
+        { name: "Weekly Strategy Calls", included: true },
+        { name: "Dedicated Account Manager", included: false }
       ],
       highlight: true
     },
@@ -40,12 +43,13 @@ export default function Services() {
       desc: "For teams and boutique agencies.",
       price: { monthly: "Custom", quarterly: "Custom" },
       features: [
-        "Custom Model Training",
-        "Full-Service Content Team",
-        "Dedicated Account Manager",
-        "Custom API Integrations",
-        "White-Label Reporting",
-        "Priority 24/7 Support"
+        { name: "Custom Model Training", included: true },
+        { name: "Full-Service Content Team", included: true },
+        { name: "Dedicated Account Manager", included: true },
+        { name: "Custom API Integrations", included: true },
+        { name: "White-Label Reporting", included: true },
+        { name: "Priority 24/7 Support", included: true },
+        { name: "Strategic Partnership Access", included: true }
       ]
     }
   ];
@@ -186,9 +190,15 @@ export default function Services() {
                 <CardContent className="flex-1 p-6 pt-0">
                   <ul className="space-y-3">
                     {plan.features.map((feature, j) => (
-                      <li key={j} className="flex items-start gap-2 text-xs text-muted-foreground">
-                        <Check className={`w-4 h-4 ${plan.highlight ? "text-primary" : "text-primary/70"} shrink-0`} />
-                        {feature}
+                      <li key={j} className={`flex items-start gap-2 text-xs ${feature.included ? "text-muted-foreground" : "text-muted-foreground/50"}`}>
+                        {feature.included ? (
+                          <Check className={`w-4 h-4 ${plan.highlight ? "text-primary" : "text-primary/70"} shrink-0`} />
+                        ) : (
+                          <X className="w-4 h-4 text-muted-foreground/40 shrink-0" />
+                        )}
+                        <span className={feature.included ? "" : "line-through decoration-muted-foreground/40"}>
+                          {feature.name}
+                        </span>
                       </li>
                     ))}
                   </ul>
