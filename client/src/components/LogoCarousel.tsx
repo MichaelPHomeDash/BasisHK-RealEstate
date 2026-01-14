@@ -7,9 +7,7 @@ const LOGOS = [
   { name: 'CK Asset', icon: Building },
   { name: 'Henderson Land', icon: Home },
   { name: 'New World Development', icon: Landmark },
-  { name: 'Sino Group', icon: Warehouse },
   { name: 'Swire Properties', icon: Hotel },
-  { name: 'Wheelock Properties', icon: Castle },
 ];
 
 export function LogoCarousel() {
