@@ -8,78 +8,108 @@ import { Link } from "wouter";
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section - AI-First Positioning */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-background overflow-hidden pt-20">
-        {/* Tech Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-background to-background" />
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03]" />
+      {/* Hero Section - Creative & Fluid */}
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-background overflow-hidden pt-20 pb-20">
+        {/* Organic Background Shapes */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-primary/5 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-purple-500/5 rounded-full blur-[100px] animate-pulse delay-1000" />
         
-        <div className="container text-center max-w-5xl relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary border border-border text-primary text-sm font-semibold mb-8 animate-in fade-in slide-in-from-bottom-5 duration-700">
-            <Sparkles className="w-4 h-4" />
-            <span>Next-Gen AI Marketing Infrastructure</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight mb-8 text-foreground leading-[1.1] animate-in fade-in slide-in-from-bottom-5 duration-700 delay-100">
-            AI-Powered Growth for <br />
-            <span className="text-primary">
-              Elite Real Estate Agents
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200">
-            We leverage generative AI video, autonomous lead capturing bots, and predictive algorithms to find premium buyers before your competitors do.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-5 duration-700 delay-300">
-            <Link href="/contact">
-              <Button size="lg" className="font-heading font-semibold text-base px-10 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 rounded-md transition-all hover:translate-y-[-2px]">
-                Start AI Transformation
-              </Button>
-            </Link>
-            <Link href="/services">
-              <Button variant="outline" size="lg" className="font-heading font-semibold text-base px-10 h-14 bg-background hover:bg-secondary border-border shadow-sm rounded-md transition-all hover:translate-y-[-2px]">
-                View Pricing Plans
-              </Button>
-            </Link>
+        <div className="container relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white border border-border/50 shadow-sm text-primary text-sm font-semibold mb-8 animate-in fade-in slide-in-from-bottom-5 duration-700 hover:scale-105 transition-transform cursor-default">
+              <Sparkles className="w-4 h-4" />
+              <span>Next-Gen AI Marketing Infrastructure</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tight mb-8 text-foreground leading-[1.1] animate-in fade-in slide-in-from-bottom-5 duration-700 delay-100">
+              AI-Powered Growth for <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                Elite Real Estate Agents
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200">
+              We leverage generative AI video, autonomous lead capturing bots, and predictive algorithms to find premium buyers before your competitors do.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-5 duration-700 delay-300">
+              <Link href="/contact">
+                <Button size="lg" className="rounded-full font-heading font-semibold text-base px-10 h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105">
+                  Start AI Transformation
+                </Button>
+              </Link>
+              <Link href="/services">
+                <Button variant="outline" size="lg" className="rounded-full font-heading font-semibold text-base px-10 h-14 bg-white/50 backdrop-blur-sm hover:bg-white border-border shadow-sm transition-all hover:scale-105">
+                  View Pricing Plans
+                </Button>
+              </Link>
+            </div>
           </div>
 
-          {/* Dashboard Preview with AI Elements */}
-          <div className="mt-20 relative mx-auto max-w-5xl animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
-            <div className="absolute -inset-1 bg-gradient-to-b from-primary/20 to-transparent rounded-xl blur-lg opacity-50" />
-            <img 
-              src="/images/social-media-dashboard.jpg" 
-              alt="AI Dashboard Preview" 
-              className="relative rounded-lg shadow-2xl border border-border w-full object-cover aspect-[16/9]"
-            />
-            
-            {/* Floating Element: AI Video Generation */}
-            <div className="absolute -top-6 -right-6 md:right-12 bg-white/95 backdrop-blur-md border border-white/20 p-4 rounded-lg shadow-xl animate-in fade-in zoom-in duration-700 delay-700 max-w-[200px]">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="p-1.5 bg-purple-100 text-purple-700 rounded-md">
-                  <Video className="w-4 h-4" />
+          {/* Bento Grid Hero Visuals */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-6xl mx-auto animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+            {/* Main Dashboard Card */}
+            <div className="md:col-span-8 relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-purple-500/20 rounded-[2rem] blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
+              <div className="relative h-full bg-white rounded-[1.5rem] border border-border/50 shadow-2xl overflow-hidden">
+                <img 
+                  src="/images/social-media-dashboard.jpg" 
+                  alt="AI Dashboard" 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Floating UI Card */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-green-100 text-green-600 rounded-xl">
+                        <TrendingUp className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-foreground">Campaign Performance</div>
+                        <div className="text-xs text-muted-foreground">+124% Lead Volume vs. Last Month</div>
+                      </div>
+                    </div>
+                    <div className="text-green-600 font-bold text-lg">+124%</div>
+                  </div>
                 </div>
-                <div className="text-xs font-bold text-foreground">AI Video Generated</div>
               </div>
-              <div className="h-1.5 w-full bg-secondary rounded-full overflow-hidden">
-                <div className="h-full bg-purple-600 w-[85%] animate-pulse" />
-              </div>
-              <div className="text-[10px] text-muted-foreground mt-1 text-right">Rendering 4K Tour...</div>
             </div>
 
-            {/* Floating Element: AI Lead Chat */}
-            <div className="absolute -bottom-6 -left-6 md:left-12 bg-white/95 backdrop-blur-md border border-white/20 p-4 rounded-lg shadow-xl animate-in fade-in zoom-in duration-700 delay-1000 max-w-[260px]">
-              <div className="flex items-start gap-3">
-                <div className="p-2 bg-primary/10 rounded-full">
-                  <Bot className="w-5 h-5 text-primary" />
+            {/* Side Cards Stack */}
+            <div className="md:col-span-4 flex flex-col gap-6">
+              {/* AI Video Card */}
+              <div className="flex-1 bg-white rounded-[1.5rem] border border-border/50 shadow-xl p-6 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Video className="w-24 h-24 text-purple-600" />
                 </div>
-                <div className="space-y-2">
-                  <div className="bg-secondary/50 p-2 rounded-lg rounded-tl-none text-xs text-foreground">
-                    "I see you're looking for a 3-bed in Mid-Levels. Is your budget above HK$20M?"
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-4">
+                    <Video className="w-6 h-6" />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-[10px] font-bold text-green-600 uppercase">Lead Qualified</span>
+                  <h3 className="text-xl font-bold mb-2">AI Video Gen</h3>
+                  <p className="text-sm text-muted-foreground">Turning photos into 4K tours instantly.</p>
+                  <div className="mt-4 h-1.5 w-full bg-secondary rounded-full overflow-hidden">
+                    <div className="h-full bg-purple-600 w-[85%] animate-pulse" />
+                  </div>
+                  <div className="text-[10px] text-muted-foreground mt-1 text-right">Rendering...</div>
+                </div>
+              </div>
+
+              {/* Chatbot Card */}
+              <div className="flex-1 bg-primary text-primary-foreground rounded-[1.5rem] shadow-xl p-6 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-white/10 rounded-full blur-xl" />
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                      <Bot className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="px-3 py-1 bg-green-500/20 text-green-300 text-xs font-bold rounded-full border border-green-500/30">
+                      Online
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">24/7 Agent</h3>
+                  <div className="bg-white/10 backdrop-blur-sm p-3 rounded-xl text-sm border border-white/10">
+                    "I found a buyer for your Mid-Levels listing!"
                   </div>
                 </div>
               </div>
@@ -88,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Features Grid */}
+      {/* Features Section - Bento Grid */}
       <section className="py-24 bg-secondary/30">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -101,39 +131,47 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 title: "AI Video Tours",
-                desc: "We turn static property photos into cinematic video tours using generative AI. No expensive film crews needed—just stunning, viral-ready video content produced in minutes.",
+                desc: "We turn static property photos into cinematic video tours using generative AI. No expensive film crews needed.",
                 icon: Video,
                 color: "text-purple-600",
-                bg: "bg-purple-50"
+                bg: "bg-purple-50",
+                colSpan: "md:col-span-2"
+              },
+              {
+                title: "Predictive Targeting",
+                desc: "Our algorithms analyze thousands of data points to identify 'Likely to Buy' signals.",
+                icon: BrainCircuit,
+                color: "text-indigo-600",
+                bg: "bg-indigo-50",
+                colSpan: "md:col-span-1"
               },
               {
                 title: "Autonomous Lead Capture",
                 desc: "Our AI chatbots engage every inquiry instantly, 24/7. They ask qualifying questions, filter out window shoppers, and book appointments directly into your calendar.",
                 icon: MessageSquareCode,
                 color: "text-blue-600",
-                bg: "bg-blue-50"
-              },
-              {
-                title: "Predictive Targeting",
-                desc: "Our algorithms analyze thousands of data points to identify 'Likely to Buy' signals, putting your ads in front of high-net-worth individuals before they even search.",
-                icon: BrainCircuit,
-                color: "text-indigo-600",
-                bg: "bg-indigo-50"
+                bg: "bg-blue-50",
+                colSpan: "md:col-span-3"
               }
             ].map((item, i) => (
-              <Card key={i} className="bg-white border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group rounded-lg">
-                <CardHeader>
-                  <div className={`w-12 h-12 ${item.bg} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <item.icon className={`w-6 h-6 ${item.color}`} />
+              <Card key={i} className={`${item.colSpan} bg-white border-none shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group rounded-[2rem] overflow-hidden`}>
+                <CardHeader className="h-full flex flex-col justify-between p-8">
+                  <div>
+                    <div className={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                      <item.icon className={`w-7 h-7 ${item.color}`} />
+                    </div>
+                    <CardTitle className="text-2xl font-heading mb-4">{item.title}</CardTitle>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
-                  <CardTitle className="text-xl font-heading mb-3">{item.title}</CardTitle>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {item.desc}
-                  </p>
+                  <div className="mt-8 flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
+                    Learn more <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
                 </CardHeader>
               </Card>
             ))}
@@ -141,68 +179,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Methodology - AI Workflow */}
-      <section className="py-24 bg-background overflow-hidden">
+      {/* Methodology - Creative Split */}
+      <section className="py-32 bg-background overflow-hidden">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-foreground">
-                The "AI-First" Advantage
+            <div className="order-2 lg:order-1">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-foreground leading-tight">
+                The "AI-First" <br /> Advantage
               </h2>
-              <p className="text-lg text-muted-foreground mb-10">
+              <p className="text-xl text-muted-foreground mb-12">
                 While other agents are manually writing emails and editing photos, our AI infrastructure is working for you at infinite scale.
               </p>
               
-              <Accordion type="single" collapsible className="w-full space-y-4" defaultValue="item-1">
+              <div className="space-y-6">
                 {[
                   {
-                    id: "item-1",
-                    title: "1. Generative Content Engine",
-                    content: "Our AI generates weeks' worth of social posts, market analysis, and property descriptions in minutes. It ensures your brand is always active, always relevant, and always visible."
+                    title: "Generative Content Engine",
+                    content: "Our AI generates weeks' worth of social posts, market analysis, and property descriptions in minutes."
                   },
                   {
-                    id: "item-2",
-                    title: "2. 24/7 Lead Qualification",
-                    content: "Stop chasing ghosts. Our AI assistants chat with leads in real-time, verifying their budget, timeline, and preferences. You only speak to prospects who are ready to sign."
+                    title: "24/7 Lead Qualification",
+                    content: "Stop chasing ghosts. Our AI assistants chat with leads in real-time, verifying their budget and timeline."
                   },
                   {
-                    id: "item-3",
-                    title: "3. Algorithmic Optimization",
-                    content: "Our ad campaigns self-optimize daily. The AI reallocates budget to the best-performing creatives and audiences, lowering your cost per lead while increasing quality."
+                    title: "Algorithmic Optimization",
+                    content: "Our ad campaigns self-optimize daily, reallocating budget to the best-performing creatives."
                   }
-                ].map((item) => (
-                  <AccordionItem key={item.id} value={item.id} className="border border-border rounded-lg px-6 bg-white shadow-sm data-[state=open]:border-primary transition-colors">
-                    <AccordionTrigger className="text-lg font-heading font-semibold py-6 hover:no-underline hover:text-primary">
-                      {item.title}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed text-base pb-6">
-                      {item.content}
-                    </AccordionContent>
-                  </AccordionItem>
+                ].map((item, i) => (
+                  <div key={i} className="bg-secondary/30 p-6 rounded-2xl hover:bg-secondary/50 transition-colors cursor-default">
+                    <h3 className="text-xl font-heading font-bold mb-2 text-foreground">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.content}</p>
+                  </div>
                 ))}
-              </Accordion>
+              </div>
             </div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/5 rounded-full blur-3xl opacity-50" />
-              <div className="grid grid-cols-2 gap-6 relative z-10">
-                <div className="relative">
-                  <img src="/images/social-growth-plant.jpg" alt="AI Growth" className="rounded-lg shadow-lg w-full h-80 object-cover translate-y-12" />
-                  {/* Floating Element: AI Processing */}
-                  <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg border border-border w-40">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Zap className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                      <span className="text-xs font-bold">AI Optimization</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground">Reducing CPA by 40%...</div>
+            
+            <div className="order-1 lg:order-2 relative">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-500/20 rounded-[3rem] rotate-6 scale-95 blur-2xl" />
+              <div className="relative bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-border/50 p-4">
+                <img src="/images/social-growth-plant.jpg" alt="AI Growth" className="rounded-[2rem] w-full h-[600px] object-cover" />
+                
+                {/* Floating Stats Cards */}
+                <div className="absolute top-12 right-12 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg animate-bounce duration-[3000ms]">
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                    <span className="font-bold">AI Active</span>
                   </div>
                 </div>
-                <div className="relative">
-                  <img src="/images/agent-meeting-warm.jpg" alt="Meeting" className="rounded-lg shadow-lg w-full h-80 object-cover" />
-                  {/* Floating Element: Success Badge */}
-                  <div className="absolute -top-4 -left-4 bg-white p-3 rounded-lg shadow-lg border border-border flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="text-xs font-bold">Lead Converted</span>
-                  </div>
+                
+                <div className="absolute bottom-12 left-12 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl max-w-[200px]">
+                  <div className="text-3xl font-bold mb-1">40%</div>
+                  <div className="text-sm opacity-90">Reduction in Cost Per Lead (CPA)</div>
                 </div>
               </div>
             </div>
@@ -210,19 +237,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
-        <div className="container text-center max-w-4xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 leading-tight">
-            Ready to Automate Your Success?
-          </h2>
-          <p className="text-xl text-primary-foreground/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join the top 1% of agents using AI to dominate the Hong Kong market. Scale your business without scaling your workload.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+      {/* CTA Section - Rounded & Soft */}
+      <section className="py-32 container">
+        <div className="bg-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
+          {/* Background Patterns */}
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-10" />
+          <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-white leading-tight">
+              Ready to Automate Your Success?
+            </h2>
+            <p className="text-xl text-white/90 mb-12 leading-relaxed">
+              Join the top 1% of agents using AI to dominate the Hong Kong market. Scale your business without scaling your workload.
+            </p>
             <Link href="/contact">
-              <Button size="lg" variant="secondary" className="font-heading font-bold text-primary h-16 px-12 rounded-md text-lg shadow-xl hover:bg-white transition-colors">
+              <Button size="lg" variant="secondary" className="rounded-full font-heading font-bold text-primary h-16 px-12 text-lg shadow-xl hover:bg-white hover:scale-105 transition-all">
                 Book AI Strategy Session
               </Button>
             </Link>
