@@ -233,11 +233,15 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] md:h-[500px]">
           {/* Large Featured Item */}
           <div className="col-span-2 row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer">
-            <img 
-              src="/images/luxury-interior-day.jpg" 
-              alt="Luxury Interior Tour" 
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
+            >
+              <source src="/videos/hong-kong-skyline-tour.mp4" type="video/mp4" />
+            </video>
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
@@ -246,9 +250,9 @@ export default function Home() {
             </div>
             <div className="absolute bottom-6 left-6 text-white">
               <div className="inline-block px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-xs font-medium mb-2 border border-white/20">
-                {t('home.gallery.tag.luxury')}
+                {t('home.gallery.tag.drone')}
               </div>
-              <h3 className="text-xl font-heading font-medium">The Peak Penthouse</h3>
+              <h3 className="text-xl font-heading font-medium">Hong Kong Skyline Tour</h3>
             </div>
           </div>
 
