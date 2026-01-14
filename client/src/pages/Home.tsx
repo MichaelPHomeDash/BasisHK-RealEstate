@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, BarChart3, Bot, BrainCircuit, Check, Globe, Sparkles, Target, TrendingUp, Video, Zap, Smartphone, Share2, MessageSquare } from "lucide-react";
+import { ArrowRight, BarChart3, Bot, BrainCircuit, Check, Globe, Sparkles, Target, TrendingUp, Video, Zap, Smartphone, Share2, MessageSquare, Play } from "lucide-react";
 import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
@@ -212,6 +212,102 @@ export default function Home() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Video Gallery - Masonry Collage */}
+      <section className="py-20 container overflow-hidden">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-5xl font-heading font-medium mb-4 text-foreground">
+            {t('home.gallery.title')}
+          </h2>
+          <p className="text-base text-muted-foreground font-light max-w-xl mx-auto">
+            {t('home.gallery.subtitle')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] md:h-[500px]">
+          {/* Large Featured Item */}
+          <div className="col-span-2 row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer">
+            <img 
+              src="/images/luxury-interior-day.jpg" 
+              alt="Luxury Interior Tour" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
+                <Play className="w-6 h-6 text-white fill-white ml-1" />
+              </div>
+            </div>
+            <div className="absolute bottom-6 left-6 text-white">
+              <div className="inline-block px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-xs font-medium mb-2 border border-white/20">
+                {t('home.gallery.tag.luxury')}
+              </div>
+              <h3 className="text-xl font-heading font-medium">The Peak Penthouse</h3>
+            </div>
+          </div>
+
+          {/* Tall Item */}
+          <div className="col-span-1 row-span-2 relative group rounded-2xl overflow-hidden cursor-pointer">
+            <img 
+              src="/images/mobile-marketing.jpg" 
+              alt="Social Media Promo" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
+                <Play className="w-5 h-5 text-white fill-white ml-1" />
+              </div>
+            </div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <div className="inline-block px-2 py-0.5 rounded-full bg-black/30 backdrop-blur-sm text-[10px] font-medium mb-1 border border-white/20">
+                {t('home.gallery.tag.promo')}
+              </div>
+              <h3 className="text-sm font-heading font-medium">Instagram Reel</h3>
+            </div>
+          </div>
+
+          {/* Standard Item 1 */}
+          <div className="col-span-1 row-span-1 relative group rounded-2xl overflow-hidden cursor-pointer">
+            <img 
+              src="/images/hero-daylight-hk.jpg" 
+              alt="Drone View" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
+                <Play className="w-4 h-4 text-white fill-white ml-1" />
+              </div>
+            </div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <div className="inline-block px-2 py-0.5 rounded-full bg-black/30 backdrop-blur-sm text-[10px] font-medium mb-1 border border-white/20">
+                {t('home.gallery.tag.drone')}
+              </div>
+            </div>
+          </div>
+
+          {/* Standard Item 2 */}
+          <div className="col-span-1 row-span-1 relative group rounded-2xl overflow-hidden cursor-pointer">
+            <img 
+              src="/images/agent-meeting-warm.jpg" 
+              alt="Virtual Tour" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/50">
+                <Play className="w-4 h-4 text-white fill-white ml-1" />
+              </div>
+            </div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <div className="inline-block px-2 py-0.5 rounded-full bg-black/30 backdrop-blur-sm text-[10px] font-medium mb-1 border border-white/20">
+                {t('home.gallery.tag.tour')}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

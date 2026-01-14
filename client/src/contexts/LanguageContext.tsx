@@ -77,6 +77,12 @@ export const translations: Record<Language, Record<string, string>> = {
     'home.cta.desc': 'Join the top 1% of agents using intelligent infrastructure to dominate the market.',
     'home.cta.button': 'Start Now',
     'home.trusted.title': 'Trusted by Agents from Top Developers',
+    'home.gallery.title': 'Cinematic Excellence',
+    'home.gallery.subtitle': 'See what our AI can create for your listings.',
+    'home.gallery.tag.luxury': 'Luxury',
+    'home.gallery.tag.tour': 'Virtual Tour',
+    'home.gallery.tag.promo': 'Social Promo',
+    'home.gallery.tag.drone': 'Drone View',
 
 
     // Services
@@ -222,6 +228,12 @@ export const translations: Record<Language, Record<string, string>> = {
     'home.cta.desc': '加入首 1% 使用智能基建主導市場的代理行列。',
     'home.cta.button': '立即開始',
     'home.trusted.title': '深受頂尖發展商代理信賴',
+    'home.gallery.title': '電影級製作',
+    'home.gallery.subtitle': '看看我們的 AI 能為您的樓盤創造什麼。',
+    'home.gallery.tag.luxury': '豪宅',
+    'home.gallery.tag.tour': '虛擬導覽',
+    'home.gallery.tag.promo': '社交推廣',
+    'home.gallery.tag.drone': '航拍視角',
 
 
     // Services
