@@ -6,11 +6,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Link } from "wouter";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Slider } from "@/components/ui/slider";
 import SEO from "@/components/SEO";
 
 export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
+  const [videoCount, setVideoCount] = useState<number>(5);
   const { t } = useLanguage();
+  const pricePerVideo = 1000;
 
   const plans = [
     {
@@ -222,6 +225,72 @@ export default function Services() {
                 </CardFooter>
               </Card>
             ))}
+          </div>
+
+          {/* Custom AI Videos Package */}
+          <div className="max-w-3xl mx-auto mt-16">
+            <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden">
+              <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
+                <div className="flex items-center gap-3 mb-2">
+                  <Video className="w-6 h-6" />
+                  <CardTitle className="text-xl font-heading font-bold text-white">{t('services.plan.videoOnly')}</CardTitle>
+                </div>
+                <CardDescription className="text-white/80 text-sm">{t('services.plan.videoOnly.desc')}</CardDescription>
+              </div>
+              <CardContent className="p-6">
+                <div className="flex flex-col md:flex-row md:items-center gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm font-medium text-muted-foreground">{t('services.videoSlider.label')}</span>
+                      <span className="text-sm font-bold text-foreground bg-secondary px-3 py-1 rounded-full">{videoCount} {t('services.feature.videos')}</span>
+                    </div>
+                    <Slider
+                      value={[videoCount]}
+                      onValueChange={(value) => setVideoCount(value[0])}
+                      min={1}
+                      max={20}
+                      step={1}
+                      className="w-full"
+                    />
+                    <div className="flex justify-between mt-2 text-xs text-muted-foreground">
+                      <span>1 {t('services.feature.video')}</span>
+                      <span>20 {t('services.feature.videos')}</span>
+                    </div>
+                  </div>
+                  <div className="text-center md:text-right md:min-w-[180px]">
+                    <div className="text-3xl font-bold text-foreground">HK${(videoCount * pricePerVideo).toLocaleString()}</div>
+                    <div className="text-xs text-muted-foreground mt-1">HK${pricePerVideo.toLocaleString()} {t('services.videoSlider.perVideo')}</div>
+                  </div>
+                </div>
+                <div className="mt-6 pt-6 border-t border-border/50">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Check className="w-4 h-4 text-purple-600 shrink-0" />
+                      {t('services.videoOnly.feature1')}
+                    </li>
+                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Check className="w-4 h-4 text-purple-600 shrink-0" />
+                      {t('services.videoOnly.feature2')}
+                    </li>
+                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Check className="w-4 h-4 text-purple-600 shrink-0" />
+                      {t('services.videoOnly.feature3')}
+                    </li>
+                    <li className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Check className="w-4 h-4 text-purple-600 shrink-0" />
+                      {t('services.videoOnly.feature4')}
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+              <CardFooter className="p-6 pt-0">
+                <Link href="/contact" className="w-full">
+                  <Button className="w-full rounded-lg h-10 font-semibold text-sm bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700">
+                    {t('services.videoOnly.cta')}
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
           </div>
 
           {/* FAQ Section */}
