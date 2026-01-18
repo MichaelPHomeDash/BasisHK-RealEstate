@@ -13,13 +13,13 @@ export default function Services() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "quarterly">("monthly");
   const [videoCount, setVideoCount] = useState<number>(5);
   const { t, language } = useLanguage();
-  const pricePerVideo = { monthly: 1000, quarterly: 800 }; // 20% discount for quarterly
+  const pricePerVideo = { monthly: 1000, quarterly: 950 }; // 5% discount for quarterly
 
   const plans = [
     {
       title: t('services.plan.starter'),
       desc: t('services.plan.starter.desc'),
-      price: { monthly: 8000, quarterly: 6400 },
+      price: { monthly: 8000, quarterly: 7600 },
       features: [
         { name: t('services.feature.aiOptimizer'), included: true },
         { name: `4 ${t('services.feature.video')}`, included: true },
@@ -33,7 +33,7 @@ export default function Services() {
     {
       title: t('services.plan.growth'),
       desc: t('services.plan.growth.desc'),
-      price: { monthly: 15000, quarterly: 12000 },
+      price: { monthly: 15000, quarterly: 14250 },
       features: [
         { name: t('services.feature.aiOptimizer'), included: true },
         { name: `8 ${t('services.feature.video')}`, included: true },
