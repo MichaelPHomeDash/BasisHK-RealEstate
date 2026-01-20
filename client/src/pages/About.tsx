@@ -122,6 +122,24 @@ export default function About() {
           </div>
         </section>
 
+        {/* Slogan - In Content We Trust */}
+        <section className="py-20 container">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 rounded-[2rem] blur-xl -z-10" />
+              <div className="bg-white/60 backdrop-blur-sm border border-white/60 rounded-[2rem] p-12 md:p-16 shadow-lg">
+                <h2 className="text-4xl md:text-6xl font-heading font-medium text-foreground mb-6 tracking-tight">
+                  {t('about.slogan.title')}
+                </h2>
+                <div className="w-16 h-1 bg-accent mx-auto rounded-full mb-8" />
+                <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
+                  {t('about.slogan.desc')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-24 container">
           <div className="bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl max-w-4xl mx-auto">

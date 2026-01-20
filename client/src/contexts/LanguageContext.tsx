@@ -182,6 +182,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.values.innovation.desc': 'No hidden fees or vanity metrics. We track what makes you money.',
     'about.values.results': 'Excellence',
     'about.values.results.desc': 'We believe every agent deserves world-class infrastructure.',
+    'about.slogan.title': 'In Content We Trust',
+    'about.slogan.desc': 'In the age of algorithms and automation, authentic content remains the cornerstone of meaningful connections. We believe that compelling stories, stunning visuals, and genuine value creation are what truly move buyers to action. Technology amplifies our reach, but it is the quality of our content that builds trust, establishes authority, and ultimately closes deals.',
     'about.cta.title': 'Join the Revolution',
     'about.cta.button': 'Get in Touch',
 
@@ -411,6 +413,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.values.innovation.desc': '絕無隱藏收費或虛榮指標。我們只追蹤能為您帶來收益的數據。',
     'about.values.results': '卓越',
     'about.values.results.desc': '我們相信每位代理都值得擁有世界級的基建。',
+    'about.slogan.title': '內容為本',
+    'about.slogan.desc': '在演算法和自動化的時代，真實的內容仍然是建立有意義連結的基石。我們相信，引人入勝的故事、令人驚豔的視覺效果和真正的價值創造，才是真正能推動買家行動的力量。科技擴大了我們的觸及範圍，但內容的質素才是建立信任、樹立權威並最終促成交易的關鍵。',
     'about.cta.title': '加入革命',
     'about.cta.button': '聯絡我們',
 
