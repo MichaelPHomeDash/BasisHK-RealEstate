@@ -22,7 +22,7 @@ export default function Services() {
       price: { monthly: 8000, quarterly: 7600 },
       features: [
         { name: t('services.feature.aiOptimizer'), included: true },
-        { name: `4 ${t('services.feature.video')}`, included: true },
+        { name: `10 ${t('services.feature.video')}`, included: true },
         { name: t('services.feature.basicPortal'), included: true },
         { name: t('services.feature.limitedListings'), included: true },
         { name: `${t('services.feature.basic')} ${t('services.feature.bot')}`, included: true },
@@ -36,7 +36,7 @@ export default function Services() {
       price: { monthly: 15000, quarterly: 14250 },
       features: [
         { name: t('services.feature.aiOptimizer'), included: true },
-        { name: `8 ${t('services.feature.video')}`, included: true },
+        { name: `25 ${t('services.feature.video')}`, included: true },
         { name: t('services.feature.basicPortal'), included: true },
         { name: t('services.feature.unlimitedListings'), included: true },
         { name: `${t('services.feature.advanced')} ${t('services.feature.bot')}`, included: true },
