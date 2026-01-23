@@ -1,6 +1,8 @@
 # robots.txt for BasisHK
+# Hong Kong Real Estate Marketing Agency
 # https://basis.hk
 
+# Allow all search engines
 User-agent: *
 Allow: /
 
@@ -10,6 +12,26 @@ Sitemap: https://basis.hk/sitemap.xml
 # Crawl-delay for polite crawling
 Crawl-delay: 1
 
-# Disallow admin or private paths (if any)
+# Disallow admin or private paths
 Disallow: /api/
 Disallow: /_
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /og-image.png
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Baidu (for Chinese market)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2

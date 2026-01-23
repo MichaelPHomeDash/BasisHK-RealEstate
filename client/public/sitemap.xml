@@ -1,49 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Homepage -->
+  <!-- Homepage - Primary Landing Page -->
   <url>
     <loc>https://basis.hk/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/"/>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://basis.hk/og-image.png</image:loc>
+      <image:title>BasisHK - Hong Kong Real Estate Marketing Agency</image:title>
+      <image:caption>AI-powered property marketing solutions for Hong Kong real estate agents</image:caption>
+    </image:image>
   </url>
   
-  <!-- Services / Pricing -->
+  <!-- Services / Pricing - High Value Page -->
   <url>
     <loc>https://basis.hk/services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/services"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/services"/>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- About -->
+  <!-- About - Company Information -->
   <url>
     <loc>https://basis.hk/about</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/about"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/about"/>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Contact -->
+  <!-- Contact - Lead Generation Page -->
   <url>
     <loc>https://basis.hk/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://basis.hk/contact"/>
     <xhtml:link rel="alternate" hreflang="zh-HK" href="https://basis.hk/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://basis.hk/contact"/>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Thank You Page -->
+  <url>
+    <loc>https://basis.hk/thank-you</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
