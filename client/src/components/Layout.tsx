@@ -149,9 +149,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h4 className="font-heading font-bold uppercase tracking-wider mb-4">{t('footer.connect')}</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">WhatsApp</a></li>
+              <li><a href="https://www.linkedin.com/company/basis-hk/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a></li>
             </ul>
           </div>
         </div>
