@@ -836,8 +836,22 @@ export default function BlogPost() {
       {/* Content */}
       <section className="py-12">
         <div className="container max-w-3xl">
-          <article className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-medium prose-headings:text-foreground prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4 prose-strong:text-foreground prose-strong:font-semibold prose-li:text-muted-foreground prose-li:my-1 prose-ul:my-4 prose-ol:my-4 prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-blockquote:italic prose-hr:border-border prose-hr:my-8 prose-a:text-primary prose-a:underline hover:prose-a:no-underline">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <article className="max-w-none">
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              components={{
+                h2: ({children}) => <h2 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mt-10 mb-4">{children}</h2>,
+                h3: ({children}) => <h3 className="text-xl md:text-2xl font-heading font-medium text-foreground mt-8 mb-3">{children}</h3>,
+                p: ({children}) => <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">{children}</p>,
+                ul: ({children}) => <ul className="list-disc pl-6 space-y-2 mb-6 text-muted-foreground">{children}</ul>,
+                ol: ({children}) => <ol className="list-decimal pl-6 space-y-2 mb-6 text-muted-foreground">{children}</ol>,
+                li: ({children}) => <li className="text-base md:text-lg leading-relaxed">{children}</li>,
+                strong: ({children}) => <strong className="font-semibold text-foreground">{children}</strong>,
+                hr: () => <hr className="my-8 border-border" />,
+                blockquote: ({children}) => <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground my-6">{children}</blockquote>,
+                a: ({children, href}) => <a href={href} className="text-primary underline hover:no-underline" target="_blank" rel="noopener noreferrer">{children}</a>,
+              }}
+            >
               {content}
             </ReactMarkdown>
           </article>
