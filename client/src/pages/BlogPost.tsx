@@ -4,6 +4,8 @@ import { ArrowLeft, ArrowRight, Calendar, Clock, Share2, User, Linkedin, Twitter
 import { Link, useParams } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEO from "@/components/SEO";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface BlogPostData {
   slug: string;
@@ -834,37 +836,10 @@ export default function BlogPost() {
       {/* Content */}
       <section className="py-12">
         <div className="container max-w-3xl">
-          <article className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-medium prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground prose-li:text-muted-foreground prose-blockquote:border-primary prose-blockquote:text-muted-foreground">
-            {content.split('\n').map((paragraph, index) => {
-              if (paragraph.startsWith('## ')) {
-                return <h2 key={index} className="text-foreground">{paragraph.replace('## ', '')}</h2>;
-              } else if (paragraph.startsWith('### ')) {
-                return <h3 key={index} className="text-foreground">{paragraph.replace('### ', '')}</h3>;
-              } else if (paragraph.startsWith('- **')) {
-                const match = paragraph.match(/- \*\*(.+?)\*\* (.+)/);
-                if (match) {
-                  return (
-                    <p key={index} className="flex gap-2 my-2">
-                      <span className="font-semibold text-foreground">{match[1]}</span>
-                      <span>{match[2]}</span>
-                    </p>
-                  );
-                }
-              } else if (paragraph.startsWith('- ')) {
-                return <li key={index}>{paragraph.replace('- ', '')}</li>;
-              } else if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
-                return <p key={index} className="font-semibold text-foreground">{paragraph.replace(/\*\*/g, '')}</p>;
-              } else if (paragraph.startsWith('1. ') || paragraph.startsWith('2. ') || paragraph.startsWith('3. ') || paragraph.startsWith('4. ')) {
-                return <li key={index}>{paragraph.replace(/^\d+\. /, '')}</li>;
-              } else if (paragraph.trim() === '') {
-                return null;
-              } else if (paragraph.startsWith('*') && paragraph.endsWith('*')) {
-                return <p key={index} className="italic">{paragraph.replace(/^\*|\*$/g, '')}</p>;
-              } else if (paragraph.startsWith('---')) {
-                return <hr key={index} className="my-8 border-border" />;
-              }
-              return <p key={index}>{paragraph}</p>;
-            })}
+          <article className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-medium prose-headings:text-foreground prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4 prose-strong:text-foreground prose-strong:font-semibold prose-li:text-muted-foreground prose-li:my-1 prose-ul:my-4 prose-ol:my-4 prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-blockquote:italic prose-hr:border-border prose-hr:my-8 prose-a:text-primary prose-a:underline hover:prose-a:no-underline">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {content}
+            </ReactMarkdown>
           </article>
           
           {/* Share Section */}
