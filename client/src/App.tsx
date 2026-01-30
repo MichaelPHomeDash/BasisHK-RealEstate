@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import CaseStudies from "./pages/CaseStudies";
 
 
 function Router() {
@@ -20,6 +21,7 @@ function Router() {
       <Route path={"/services"} component={Services} />
       <Route path={"/about"} component={About} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/case-studies"} component={CaseStudies} />
       <Route path={"/thank-you"} component={ThankYou} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/:slug"} component={BlogPost} />

@@ -18,6 +18,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.blog': 'Blog',
+    'nav.caseStudies': 'Case Studies',
     'nav.getStarted': 'Get Started',
     'nav.getAccess': 'Get Access',
     
@@ -250,6 +251,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.about': '關於我們',
     'nav.contact': '聯絡我們',
     'nav.blog': '博客',
+    'nav.caseStudies': '成功案例',
     'nav.getStarted': '免費諮詢',
     'nav.getAccess': '立即體驗',
     
