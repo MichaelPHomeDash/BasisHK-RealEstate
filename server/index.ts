@@ -16,11 +16,44 @@ async function startServer() {
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
-  app.use(express.static(staticPath));
+  // Set proper MIME types for special files
+  app.use(express.static(staticPath, {
+    setHeaders: (res, filePath) => {
+      // Set correct content type for .txt files
+      if (filePath.endsWith('.txt')) {
+        res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+      }
+      // Set correct content type for XML files
+      if (filePath.endsWith('.xml')) {
+        res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+      }
+    }
+  }));
 
   // Health check endpoint for cloud platforms (DigitalOcean, etc.)
   app.get("/health", (_req, res) => {
     res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+
+  // Explicitly serve robots.txt, sitemap.xml, llms.txt, ai.txt
+  app.get("/robots.txt", (_req, res) => {
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.sendFile(path.join(staticPath, "robots.txt"));
+  });
+
+  app.get("/sitemap.xml", (_req, res) => {
+    res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+    res.sendFile(path.join(staticPath, "sitemap.xml"));
+  });
+
+  app.get("/llms.txt", (_req, res) => {
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.sendFile(path.join(staticPath, "llms.txt"));
+  });
+
+  app.get("/ai.txt", (_req, res) => {
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.sendFile(path.join(staticPath, "ai.txt"));
   });
 
   // Handle client-side routing - serve index.html for all routes
