@@ -63,6 +63,48 @@ const blogPosts: BlogPost[] = [
     category: "Company Vision",
     categoryZh: "公司願景",
     image: "/images/hero-daylight-hk.jpg"
+  },
+  {
+    id: "4",
+    slug: "generative-ai-property-listings",
+    title: "How Generative AI is Revolutionizing Property Listings in 2026",
+    titleZh: "生成式 AI 如何在 2026 年徹底改變物業展示",
+    excerpt: "From AI-written descriptions to virtual staging and video generation, generative AI is transforming how properties are presented online. Discover the tools and techniques leading agents are using to stand out.",
+    excerptZh: "從 AI 撰寫的描述到虛擬佈置和影片生成，生成式 AI 正在改變物業的線上展示方式。了解頂尖代理正在使用的工具和技術。",
+    author: "Alex Tam",
+    date: "2026-01-25",
+    readTime: "7 min",
+    category: "AI Technology",
+    categoryZh: "AI 科技",
+    image: "/images/hero-city-night.jpg"
+  },
+  {
+    id: "5",
+    slug: "ai-video-tours-future-real-estate",
+    title: "AI Video Tours: The Future of Real Estate Showings is Already Here",
+    titleZh: "AI 影片導覽：地產睇樓的未來已經來臨",
+    excerpt: "Physical viewings are time-consuming and often unproductive. AI-generated video tours are changing the game by qualifying buyers before they ever step foot in a property. Here's how it works.",
+    excerptZh: "實地睇樓既耗時又往往效果不彰。AI 生成的影片導覽正在改變遊戲規則，讓買家在踏入物業之前就已經被篩選。了解其運作原理。",
+    author: "Michelle Lee",
+    date: "2026-01-22",
+    readTime: "5 min",
+    category: "PropTech Trends",
+    categoryZh: "地產科技趨勢",
+    image: "/images/luxury-interior-day.jpg"
+  },
+  {
+    id: "6",
+    slug: "chatgpt-real-estate-agents-guide",
+    title: "The Real Estate Agent's Complete Guide to Using ChatGPT and AI Tools",
+    titleZh: "地產代理使用 ChatGPT 和 AI 工具完全指南",
+    excerpt: "From writing listing descriptions to responding to inquiries and creating social media content, AI tools can save agents 10+ hours per week. This practical guide shows you exactly how to get started.",
+    excerptZh: "從撰寫樓盤描述到回覆查詢和創建社交媒體內容，AI 工具每週可為代理節省 10 小時以上。本實用指南將向您展示如何開始使用。",
+    author: "Kevin Chow",
+    date: "2026-01-18",
+    readTime: "12 min",
+    category: "Practical Guide",
+    categoryZh: "實用指南",
+    image: "/images/hero-daylight-hk.jpg"
   }
 ];
 

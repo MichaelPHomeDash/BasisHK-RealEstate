@@ -740,6 +740,735 @@ BasisHK 由四位從不同角度看到同一問題的人創立：
 
 *準備好改變您的房地產營銷了嗎？[聯繫我們](/contact)了解 BasisHK 如何幫助您在香港競爭激烈的物業市場中脫穎而出。*
     `
+  },
+  "generative-ai-property-listings": {
+    slug: "generative-ai-property-listings",
+    title: "How Generative AI is Revolutionizing Property Listings in 2026",
+    titleZh: "生成式 AI 如何在 2026 年徹底改變物業展示",
+    author: "Alex Tam",
+    authorRole: "AI Technology Specialist",
+    authorRoleZh: "AI 技術專家",
+    date: "January 25, 2026",
+    readTime: "7 min read",
+    category: "AI Technology",
+    categoryZh: "AI 科技",
+    image: "/images/hero-city-night.jpg",
+    content: `
+## The AI Revolution in Property Marketing
+
+The real estate industry is experiencing a seismic shift. Generative AI — the technology behind ChatGPT, DALL-E, and Midjourney — is no longer a futuristic concept. It's here, and it's fundamentally changing how properties are marketed and sold.
+
+For forward-thinking agents, this represents the biggest opportunity in a generation. For those who ignore it, extinction awaits.
+
+## What is Generative AI?
+
+Generative AI refers to artificial intelligence systems that can create new content — text, images, video, and audio — based on patterns learned from existing data. Unlike traditional software that follows rigid rules, generative AI can:
+
+- **Write compelling property descriptions** in seconds
+- **Generate virtual staging** for empty rooms
+- **Create video walkthroughs** from static photos
+- **Produce marketing copy** tailored to specific buyer personas
+- **Translate listings** into multiple languages instantly
+
+## Real-World Applications Transforming Listings
+
+### 1. AI-Written Property Descriptions
+
+Gone are the days of spending 30 minutes crafting the perfect listing description. Modern AI tools can analyze property photos and floor plans to generate compelling, SEO-optimized descriptions in seconds.
+
+**Before AI:**
+> "3-bedroom apartment in Central. Good condition. Near MTR."
+
+**After AI:**
+> "Bathed in natural light, this stunning 3-bedroom residence offers panoramic harbor views from its prime Central location. Just steps from the MTR, residents enjoy seamless connectivity while retreating to a sanctuary of modern luxury. The open-plan living area flows effortlessly onto a private balcony — perfect for morning coffee or evening entertaining."
+
+The difference? One sells. One doesn't.
+
+### 2. Virtual Staging at Scale
+
+Empty properties are notoriously difficult to sell. Buyers struggle to visualize potential. Traditional staging costs HK$50,000-100,000 per property.
+
+AI virtual staging costs? Under HK$500.
+
+Modern AI can:
+- Add furniture to empty rooms
+- Change wall colors and flooring
+- Show multiple design styles (modern, traditional, minimalist)
+- Remove existing furniture and re-stage
+
+### 3. AI Video Generation
+
+This is where the real magic happens. Platforms like BasisHK can now generate cinematic property videos from just a few photos and a floor plan. These aren't slideshows — they're professional-quality video tours with:
+
+- Smooth camera movements
+- Professional voiceovers
+- Background music
+- Lifestyle imagery
+- Call-to-action overlays
+
+What once required a HK$20,000+ video production now costs a fraction and delivers in 48 hours.
+
+### 4. Multilingual Marketing
+
+Hong Kong's property market is international. Mainland Chinese, Singaporean, and Western buyers all require different approaches.
+
+AI can instantly translate and culturally adapt listings for different markets — not just word-for-word translation, but genuine localization that resonates with each audience.
+
+## The Competitive Advantage
+
+Agents using generative AI are seeing:
+
+- **3x more inquiries** per listing
+- **50% faster sales cycles**
+- **40% reduction** in marketing costs
+- **Higher client satisfaction** scores
+
+The math is simple: better content = more attention = more sales.
+
+## Getting Started with AI
+
+You don't need to be a tech expert to leverage these tools. Here's a practical roadmap:
+
+### Week 1: Text Generation
+Start using ChatGPT or similar tools for listing descriptions. Experiment with different prompts until you find what works.
+
+### Week 2: Image Enhancement
+Try AI virtual staging tools on your next empty listing. Compare results to traditional photos.
+
+### Week 3: Video Content
+Explore AI video generation platforms like BasisHK. Generate your first property video.
+
+### Week 4: Integration
+Build AI into your standard workflow. Create templates and processes for consistent use.
+
+## The Future is Already Here
+
+Within 2 years, AI-generated content will be the industry standard. The question isn't whether to adopt these tools — it's how quickly you can master them.
+
+The agents who move first will capture market share. The rest will wonder what happened.
+
+---
+
+*Ready to revolutionize your property marketing with AI? [Book a demo](/contact) to see how BasisHK can transform your listings.*
+    `,
+    contentZh: `
+## 物業營銷的 AI 革命
+
+房地產行業正在經歷一場巨變。生成式 AI — ChatGPT、DALL-E 和 Midjourney 背後的技術 — 不再是未來概念。它已經到來，正在從根本上改變物業的營銷和銷售方式。
+
+對於有遠見的代理來說，這代表了一代人中最大的機遇。對於忽視它的人來說，淘汰在等待著他們。
+
+## 什麼是生成式 AI？
+
+生成式 AI 是指能夠根據從現有數據中學習的模式創建新內容（文字、圖像、視頻和音頻）的人工智能系統。與遵循嚴格規則的傳統軟件不同，生成式 AI 可以：
+
+- **在幾秒鐘內撰寫引人注目的物業描述**
+- **為空房間生成虛擬佈置**
+- **從靜態照片創建視頻導覽**
+- **製作針對特定買家群體的營銷文案**
+- **即時將樓盤翻譯成多種語言**
+
+## 正在改變樓盤展示的實際應用
+
+### 1. AI 撰寫的物業描述
+
+花 30 分鐘精心製作完美樓盤描述的日子已經過去。現代 AI 工具可以分析物業照片和平面圖，在幾秒鐘內生成引人注目、SEO 優化的描述。
+
+**使用 AI 之前：**
+> "中環三房單位。狀況良好。近港鐵。"
+
+**使用 AI 之後：**
+> "沐浴在自然光中，這間令人驚嘆的三房住宅從其優越的中環位置提供全景海港景觀。距離港鐵僅幾步之遙，住戶享受無縫連接，同時可以退隱到現代奢華的避風港。開放式客廳無縫延伸至私人陽台 — 非常適合早晨咖啡或晚間招待。"
+
+區別？一個能賣出去。一個不能。
+
+### 2. 規模化虛擬佈置
+
+空置物業眾所周知難以出售。買家難以想像潛力。傳統佈置每個物業花費 HK$50,000-100,000。
+
+AI 虛擬佈置成本？低於 HK$500。
+
+現代 AI 可以：
+- 為空房間添加家具
+- 改變牆壁顏色和地板
+- 展示多種設計風格（現代、傳統、極簡）
+- 移除現有家具並重新佈置
+
+### 3. AI 視頻生成
+
+這是真正神奇的地方。像 BasisHK 這樣的平台現在可以僅從幾張照片和平面圖生成電影級物業視頻。這些不是幻燈片 — 它們是專業品質的視頻導覽，包括：
+
+- 流暢的鏡頭移動
+- 專業配音
+- 背景音樂
+- 生活方式圖像
+- 行動號召覆蓋層
+
+曾經需要 HK$20,000+ 視頻製作的工作，現在只需一小部分成本，48 小時內交付。
+
+### 4. 多語言營銷
+
+香港的物業市場是國際化的。中國大陸、新加坡和西方買家都需要不同的方法。
+
+AI 可以即時翻譯和文化適應不同市場的樓盤 — 不僅僅是逐字翻譯，而是與每個受眾產生共鳴的真正本地化。
+
+## 競爭優勢
+
+使用生成式 AI 的代理正在看到：
+
+- 每個樓盤**詢問量增加 3 倍**
+- **銷售週期縮短 50%**
+- **營銷成本降低 40%**
+- **客戶滿意度更高**
+
+數學很簡單：更好的內容 = 更多關注 = 更多銷售。
+
+## 開始使用 AI
+
+您不需要成為技術專家就能利用這些工具。這是一個實用的路線圖：
+
+### 第 1 週：文字生成
+開始使用 ChatGPT 或類似工具撰寫樓盤描述。嘗試不同的提示，直到找到有效的方法。
+
+### 第 2 週：圖像增強
+在您的下一個空置樓盤上嘗試 AI 虛擬佈置工具。將結果與傳統照片進行比較。
+
+### 第 3 週：視頻內容
+探索像 BasisHK 這樣的 AI 視頻生成平台。生成您的第一個物業視頻。
+
+### 第 4 週：整合
+將 AI 融入您的標準工作流程。創建模板和流程以確保一致使用。
+
+## 未來已經到來
+
+在 2 年內，AI 生成的內容將成為行業標準。問題不是是否採用這些工具 — 而是您能多快掌握它們。
+
+先行動的代理將佔領市場份額。其他人會想知道發生了什麼。
+
+---
+
+*準備好用 AI 革新您的物業營銷了嗎？[預約演示](/contact)，了解 BasisHK 如何改變您的樓盤展示。*
+    `
+  },
+  "ai-video-tours-future-real-estate": {
+    slug: "ai-video-tours-future-real-estate",
+    title: "AI Video Tours: The Future of Real Estate Showings is Already Here",
+    titleZh: "AI 影片導覽：地產睇樓的未來已經來臨",
+    author: "Michelle Lee",
+    authorRole: "PropTech Analyst",
+    authorRoleZh: "地產科技分析師",
+    date: "January 22, 2026",
+    readTime: "5 min read",
+    category: "PropTech Trends",
+    categoryZh: "地產科技趨勢",
+    image: "/images/luxury-interior-day.jpg",
+    content: `
+## The Problem with Physical Viewings
+
+Every real estate agent knows the frustration. You spend hours coordinating schedules, traveling across the city, and showing properties to buyers who — within 30 seconds of walking through the door — clearly aren't interested.
+
+The statistics are sobering:
+
+- **Average viewings before purchase:** 12-15 properties
+- **Average time per viewing:** 45 minutes (including travel)
+- **Conversion rate:** Less than 8%
+
+That's over 10 hours of viewing time for a single transaction, most of it wasted on unqualified leads.
+
+## Enter AI Video Tours
+
+AI-generated video tours are changing this equation entirely. Instead of physical viewings as the first step, video becomes the qualifier.
+
+### How It Works
+
+1. **Upload property photos and floor plan** to an AI platform
+2. **AI generates a cinematic video tour** in 24-48 hours
+3. **Share video with potential buyers** before scheduling viewings
+4. **Only show properties in person** to genuinely interested, qualified buyers
+
+The result? Fewer viewings, but dramatically higher conversion rates.
+
+## Real Results from Early Adopters
+
+Agents using AI video tours report:
+
+- **70% reduction** in unproductive viewings
+- **3x increase** in viewing-to-offer conversion
+- **50% faster** time-to-sale
+- **Higher client satisfaction** from both buyers and sellers
+
+### Case Study: Luxury Property in The Peak
+
+A recent HK$85 million listing in The Peak received 47 video tour views in the first week. Of those, only 8 requested physical viewings. Of those 8, 3 made offers.
+
+Compare this to the traditional approach: dozens of viewings, weeks of coordination, and maybe one or two serious inquiries.
+
+## What Makes AI Videos Different
+
+These aren't your grandfather's slideshow videos. Modern AI video tours include:
+
+### Cinematic Quality
+- Smooth, professional camera movements
+- Proper pacing and transitions
+- High-resolution output (4K available)
+
+### Professional Audio
+- AI-generated voiceovers in multiple languages
+- Ambient background music
+- Sound design that creates emotional impact
+
+### Intelligent Storytelling
+- Highlights key selling points automatically
+- Creates narrative flow through the property
+- Includes lifestyle imagery and context
+
+### Interactive Elements
+- Clickable floor plans
+- Room-by-room navigation
+- Embedded inquiry forms
+
+## The Buyer Perspective
+
+Modern buyers — especially younger demographics — actually prefer video-first experiences:
+
+- **89%** of millennials watch property videos before contacting agents
+- **67%** say video is "very important" in their property search
+- **43%** have made offers on properties they first discovered via video
+
+Video isn't replacing physical viewings. It's making them more productive.
+
+## Implementation Strategy
+
+### For Individual Agents
+
+1. Start with your premium listings (highest ROI)
+2. Use video as a lead qualification tool
+3. Track engagement metrics (views, watch time, inquiries)
+4. Refine your approach based on data
+
+### For Agencies
+
+1. Establish video as standard for all listings above a certain price point
+2. Create templates and brand guidelines
+3. Train agents on video distribution best practices
+4. Integrate video analytics into your CRM
+
+## The Cost-Benefit Analysis
+
+| Traditional Approach | AI Video Approach |
+|---------------------|-------------------|
+| 15 viewings average | 5 viewings average |
+| 11+ hours agent time | 4 hours agent time |
+| HK$0 video cost | HK$1,000-2,000 video cost |
+| 8% conversion rate | 25%+ conversion rate |
+
+The math is clear: AI video tours pay for themselves many times over.
+
+## The Future is Video-First
+
+Within 3 years, property video tours will be as expected as photos are today. Listings without video will seem incomplete, unprofessional, and suspicious.
+
+The agents who master video now will own the market later.
+
+---
+
+*Ready to transform your property showings? [Get started with BasisHK](/contact) and see how AI video tours can revolutionize your business.*
+    `,
+    contentZh: `
+## 實地睇樓的問題
+
+每個地產代理都知道這種挫敗感。您花費數小時協調時間表，穿越城市，向買家展示物業 — 而他們在走進門後 30 秒內 — 顯然不感興趣。
+
+統計數據令人清醒：
+
+- **購買前平均睇樓次數：** 12-15 個物業
+- **每次睇樓平均時間：** 45 分鐘（包括交通）
+- **轉化率：** 低於 8%
+
+這意味著一筆交易需要超過 10 小時的睇樓時間，其中大部分浪費在不合格的潛在客戶身上。
+
+## AI 影片導覽的出現
+
+AI 生成的影片導覽正在徹底改變這個等式。影片成為篩選工具，而不是將實地睇樓作為第一步。
+
+### 運作方式
+
+1. **將物業照片和平面圖上傳**到 AI 平台
+2. **AI 在 24-48 小時內生成電影級影片導覽**
+3. **在安排睇樓前與潛在買家分享影片**
+4. **只向真正感興趣、合格的買家親自展示物業**
+
+結果？睇樓次數減少，但轉化率大幅提高。
+
+## 早期採用者的真實成果
+
+使用 AI 影片導覽的代理報告：
+
+- 無效睇樓**減少 70%**
+- 睇樓到報價轉化率**增加 3 倍**
+- 銷售時間**縮短 50%**
+- 買家和賣家的**客戶滿意度更高**
+
+### 案例研究：山頂豪宅
+
+最近一個位於山頂的 HK$8,500 萬樓盤在第一週收到了 47 次影片導覽觀看。其中只有 8 人要求實地睇樓。在這 8 人中，3 人提出了報價。
+
+與傳統方法相比：數十次睇樓，數週的協調，可能只有一兩個認真的詢問。
+
+## AI 影片有何不同
+
+這些不是您祖父那一代的幻燈片影片。現代 AI 影片導覽包括：
+
+### 電影級品質
+- 流暢、專業的鏡頭移動
+- 適當的節奏和過渡
+- 高解析度輸出（可提供 4K）
+
+### 專業音頻
+- 多語言 AI 生成配音
+- 環境背景音樂
+- 創造情感衝擊的聲音設計
+
+### 智能敘事
+- 自動突出關鍵賣點
+- 創建貫穿物業的敘事流程
+- 包含生活方式圖像和背景
+
+### 互動元素
+- 可點擊的平面圖
+- 逐房間導航
+- 嵌入式詢問表單
+
+## 買家視角
+
+現代買家 — 尤其是年輕群體 — 實際上更喜歡影片優先的體驗：
+
+- **89%** 的千禧世代在聯繫代理之前觀看物業影片
+- **67%** 表示影片在他們的物業搜索中「非常重要」
+- **43%** 曾對他們首先通過影片發現的物業提出報價
+
+影片不是取代實地睇樓。它使睇樓更有成效。
+
+## 實施策略
+
+### 對於個人代理
+
+1. 從您的優質樓盤開始（最高投資回報率）
+2. 使用影片作為潛在客戶篩選工具
+3. 追蹤參與度指標（觀看次數、觀看時間、詢問）
+4. 根據數據完善您的方法
+
+### 對於代理行
+
+1. 將影片確立為所有超過一定價格點樓盤的標準
+2. 創建模板和品牌指南
+3. 培訓代理影片分發最佳實踐
+4. 將影片分析整合到您的 CRM 中
+
+## 成本效益分析
+
+| 傳統方法 | AI 影片方法 |
+|---------------------|-------------------|
+| 平均 15 次睇樓 | 平均 5 次睇樓 |
+| 11+ 小時代理時間 | 4 小時代理時間 |
+| HK$0 影片成本 | HK$1,000-2,000 影片成本 |
+| 8% 轉化率 | 25%+ 轉化率 |
+
+數學很清楚：AI 影片導覽多次收回成本。
+
+## 未來是影片優先
+
+在 3 年內，物業影片導覽將像今天的照片一樣被期待。沒有影片的樓盤會顯得不完整、不專業和可疑。
+
+現在掌握影片的代理將在未來擁有市場。
+
+---
+
+*準備好改變您的物業展示了嗎？[開始使用 BasisHK](/contact)，了解 AI 影片導覽如何革新您的業務。*
+    `
+  },
+  "chatgpt-real-estate-agents-guide": {
+    slug: "chatgpt-real-estate-agents-guide",
+    title: "The Real Estate Agent's Complete Guide to Using ChatGPT and AI Tools",
+    titleZh: "地產代理使用 ChatGPT 和 AI 工具完全指南",
+    author: "Kevin Chow",
+    authorRole: "Technology Editor",
+    authorRoleZh: "科技編輯",
+    date: "January 18, 2026",
+    readTime: "12 min read",
+    category: "Practical Guide",
+    categoryZh: "實用指南",
+    image: "/images/hero-daylight-hk.jpg",
+    content: `
+## Why Every Agent Needs AI in Their Toolkit
+
+Let's be honest: most real estate agents are drowning in administrative work. Between writing listings, responding to inquiries, creating social media content, and managing client communications, there's barely time left for what actually matters — building relationships and closing deals.
+
+AI tools like ChatGPT can give you back 10+ hours per week. This isn't hype. It's math.
+
+## Getting Started with ChatGPT
+
+### Setting Up
+
+1. Go to chat.openai.com
+2. Create a free account (or upgrade to Plus for faster responses)
+3. Start with the GPT-4 model for best results
+
+### The Art of Prompting
+
+The key to getting great results from ChatGPT is learning how to ask. Here's the formula:
+
+**Role + Context + Task + Format**
+
+**Example:**
+> "You are an experienced Hong Kong real estate copywriter. I have a 3-bedroom apartment in Mid-Levels with harbor views, 1,200 sq ft, recently renovated with Italian marble floors. Write a compelling listing description that emphasizes the lifestyle benefits. Use a sophisticated, aspirational tone. Keep it under 150 words."
+
+## 10 Practical Use Cases for Real Estate Agents
+
+### 1. Writing Listing Descriptions
+
+**Prompt Template:**
+> "Write a property listing description for a [property type] in [location]. Key features: [list features]. Target buyer: [buyer profile]. Tone: [professional/luxury/friendly]. Length: [word count]."
+
+**Pro Tip:** Feed ChatGPT your best-performing past listings and ask it to match the style.
+
+### 2. Responding to Inquiries
+
+**Prompt Template:**
+> "A potential buyer sent this inquiry: [paste inquiry]. Write a professional, warm response that answers their questions and encourages them to schedule a viewing. Include a call-to-action."
+
+### 3. Creating Social Media Content
+
+**Prompt Template:**
+> "Create 5 Instagram captions for a luxury property in [location]. Each caption should be engaging, include relevant hashtags, and have a different angle (lifestyle, investment, features, neighborhood, urgency)."
+
+### 4. Writing Email Newsletters
+
+**Prompt Template:**
+> "Write a monthly newsletter for my real estate clients. Include: market update for [area], 3 featured listings, one home staging tip, and a personal note. Keep it under 500 words."
+
+### 5. Preparing for Client Meetings
+
+**Prompt Template:**
+> "I'm meeting with a client who wants to sell their [property type] in [location]. What questions should I ask to understand their needs? What market data should I prepare? What objections might they have?"
+
+### 6. Market Analysis Summaries
+
+**Prompt Template:**
+> "Summarize the key trends in the [location] property market for [property type]. Include price trends, transaction volumes, and outlook. Write for a client audience, not industry professionals."
+
+### 7. Negotiation Preparation
+
+**Prompt Template:**
+> "I'm negotiating on behalf of a buyer for a property listed at [price]. The property has been on market for [duration] and has [issues/advantages]. What negotiation strategies should I consider? What counter-arguments might the seller make?"
+
+### 8. Client Follow-Up Messages
+
+**Prompt Template:**
+> "Write a follow-up message for a client who viewed [property] [time ago] but hasn't made a decision. Be helpful, not pushy. Offer additional information or alternative options."
+
+### 9. Objection Handling Scripts
+
+**Prompt Template:**
+> "A buyer says: '[objection]'. Write 3 different responses that address this concern professionally while keeping the deal moving forward."
+
+### 10. Neighborhood Guides
+
+**Prompt Template:**
+> "Write a neighborhood guide for [area] targeting [buyer profile]. Include: lifestyle, amenities, schools, transport, dining, and property market overview. Make it informative but engaging."
+
+## Beyond ChatGPT: Other AI Tools for Agents
+
+### For Images
+- **Canva AI** — Create social media graphics
+- **Remove.bg** — Remove backgrounds from photos
+- **AI virtual staging tools** — Stage empty properties digitally
+
+### For Video
+- **BasisHK** — Generate property videos from photos
+- **Descript** — Edit videos with AI transcription
+- **Synthesia** — Create AI presenter videos
+
+### For Productivity
+- **Otter.ai** — Transcribe client meetings
+- **Notion AI** — Organize notes and documents
+- **Grammarly** — Polish all written communications
+
+## Best Practices and Warnings
+
+### Do:
+- Always review and edit AI-generated content
+- Add your personal touch and local knowledge
+- Use AI to enhance, not replace, your expertise
+- Keep learning and experimenting with prompts
+
+### Don't:
+- Copy-paste AI content without review
+- Use AI for legal or financial advice
+- Rely on AI for factual accuracy (always verify)
+- Forget that clients want human connection
+
+## Time Savings Calculator
+
+| Task | Traditional Time | With AI | Weekly Savings |
+|------|-----------------|---------|----------------|
+| Listing descriptions | 30 min each | 5 min each | 2+ hours |
+| Social media posts | 1 hour/day | 15 min/day | 3+ hours |
+| Email responses | 2 hours/day | 45 min/day | 6+ hours |
+| Market summaries | 2 hours each | 20 min each | 1+ hours |
+
+**Total potential savings: 12+ hours per week**
+
+That's an extra day and a half you can spend on client relationships and closing deals.
+
+## Getting Started Today
+
+1. **This week:** Sign up for ChatGPT and write your first listing description
+2. **Next week:** Create a library of prompt templates for common tasks
+3. **This month:** Integrate AI into your daily workflow
+4. **Ongoing:** Keep learning and refining your approach
+
+The agents who master these tools now will have an insurmountable advantage over those who wait.
+
+---
+
+*Want to take your AI-powered marketing to the next level? [Contact BasisHK](/contact) to see how our platform can automate your entire content creation workflow.*
+    `,
+    contentZh: `
+## 為什麼每個代理都需要 AI 工具
+
+讓我們坦誠相告：大多數地產代理都被行政工作淹沒了。在撰寫樓盤描述、回覆詢問、創建社交媒體內容和管理客戶溝通之間，幾乎沒有時間留給真正重要的事情 — 建立關係和成交。
+
+像 ChatGPT 這樣的 AI 工具可以每週為您節省 10 小時以上。這不是炒作。這是數學。
+
+## 開始使用 ChatGPT
+
+### 設置
+
+1. 前往 chat.openai.com
+2. 創建免費帳戶（或升級到 Plus 以獲得更快的響應）
+3. 從 GPT-4 模型開始以獲得最佳結果
+
+### 提示的藝術
+
+從 ChatGPT 獲得出色結果的關鍵是學習如何提問。這是公式：
+
+**角色 + 背景 + 任務 + 格式**
+
+**示例：**
+> "你是一位經驗豐富的香港房地產文案撰稿人。我有一個位於半山區的三房公寓，可看海景，1,200 平方呎，最近用意大利大理石地板翻新。撰寫一個引人注目的樓盤描述，強調生活方式的好處。使用精緻、令人嚮往的語調。保持在 150 字以內。"
+
+## 地產代理的 10 個實用案例
+
+### 1. 撰寫樓盤描述
+
+**提示模板：**
+> "為位於 [位置] 的 [物業類型] 撰寫物業樓盤描述。主要特點：[列出特點]。目標買家：[買家概況]。語調：[專業/奢華/友好]。長度：[字數]。"
+
+**專業提示：** 將您過去表現最好的樓盤描述提供給 ChatGPT，並要求它匹配風格。
+
+### 2. 回覆詢問
+
+**提示模板：**
+> "一位潛在買家發送了這個詢問：[粘貼詢問]。撰寫一個專業、熱情的回覆，回答他們的問題並鼓勵他們安排睇樓。包含行動號召。"
+
+### 3. 創建社交媒體內容
+
+**提示模板：**
+> "為位於 [位置] 的豪華物業創建 5 個 Instagram 標題。每個標題應該引人入勝，包含相關標籤，並有不同的角度（生活方式、投資、特點、社區、緊迫性）。"
+
+### 4. 撰寫電子郵件通訊
+
+**提示模板：**
+> "為我的房地產客戶撰寫月度通訊。包括：[地區] 的市場更新、3 個精選樓盤、一個家居佈置技巧和個人備註。保持在 500 字以內。"
+
+### 5. 準備客戶會議
+
+**提示模板：**
+> "我將與一位想要出售其位於 [位置] 的 [物業類型] 的客戶會面。我應該問什麼問題來了解他們的需求？我應該準備什麼市場數據？他們可能有什麼異議？"
+
+### 6. 市場分析摘要
+
+**提示模板：**
+> "總結 [位置] [物業類型] 物業市場的主要趨勢。包括價格趨勢、交易量和展望。為客戶受眾撰寫，而不是行業專業人士。"
+
+### 7. 談判準備
+
+**提示模板：**
+> "我正在代表買家就一個標價 [價格] 的物業進行談判。該物業已在市場上 [時間]，有 [問題/優勢]。我應該考慮什麼談判策略？賣家可能會提出什麼反駁論點？"
+
+### 8. 客戶跟進消息
+
+**提示模板：**
+> "為 [時間前] 看過 [物業] 但尚未做出決定的客戶撰寫跟進消息。要有幫助，不要咄咄逼人。提供額外信息或替代選項。"
+
+### 9. 異議處理腳本
+
+**提示模板：**
+> "買家說：'[異議]'。撰寫 3 個不同的回覆，專業地解決這個問題，同時保持交易向前推進。"
+
+### 10. 社區指南
+
+**提示模板：**
+> "為針對 [買家概況] 的 [地區] 撰寫社區指南。包括：生活方式、設施、學校、交通、餐飲和物業市場概述。使其信息豐富但引人入勝。"
+
+## 超越 ChatGPT：代理的其他 AI 工具
+
+### 圖像
+- **Canva AI** — 創建社交媒體圖形
+- **Remove.bg** — 從照片中移除背景
+- **AI 虛擬佈置工具** — 數字化佈置空置物業
+
+### 視頻
+- **BasisHK** — 從照片生成物業視頻
+- **Descript** — 使用 AI 轉錄編輯視頻
+- **Synthesia** — 創建 AI 主持人視頻
+
+### 生產力
+- **Otter.ai** — 轉錄客戶會議
+- **Notion AI** — 組織筆記和文檔
+- **Grammarly** — 潤色所有書面溝通
+
+## 最佳實踐和警告
+
+### 應該：
+- 始終審查和編輯 AI 生成的內容
+- 添加您的個人風格和本地知識
+- 使用 AI 來增強而不是取代您的專業知識
+- 不斷學習和嘗試提示
+
+### 不應該：
+- 不經審查就複製粘貼 AI 內容
+- 使用 AI 進行法律或財務建議
+- 依賴 AI 的事實準確性（始終驗證）
+- 忘記客戶想要人際聯繫
+
+## 時間節省計算器
+
+| 任務 | 傳統時間 | 使用 AI | 每週節省 |
+|------|-----------------|---------|----------------|
+| 樓盤描述 | 每個 30 分鐘 | 每個 5 分鐘 | 2+ 小時 |
+| 社交媒體帖子 | 每天 1 小時 | 每天 15 分鐘 | 3+ 小時 |
+| 電子郵件回覆 | 每天 2 小時 | 每天 45 分鐘 | 6+ 小時 |
+| 市場摘要 | 每個 2 小時 | 每個 20 分鐘 | 1+ 小時 |
+
+**總潛在節省：每週 12+ 小時**
+
+這是您可以花在客戶關係和成交上的額外一天半時間。
+
+## 今天就開始
+
+1. **本週：** 註冊 ChatGPT 並撰寫您的第一個樓盤描述
+2. **下週：** 為常見任務創建提示模板庫
+3. **本月：** 將 AI 整合到您的日常工作流程中
+4. **持續：** 不斷學習和完善您的方法
+
+現在掌握這些工具的代理將比那些等待的人擁有無法逾越的優勢。
+
+---
+
+*想將您的 AI 驅動營銷提升到新水平嗎？[聯繫 BasisHK](/contact)，了解我們的平台如何自動化您的整個內容創建工作流程。*
+    `
   }
 };
 
